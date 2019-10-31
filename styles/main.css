@@ -6,17 +6,34 @@ html{
 }
 
 body{
-    background-color: burlywood;
+    background-color: #1C3368;
     font-family: Poppins, sans-serif;
     font-size: 1.6rem;
 }
+/*button primary*/
+button {
+    background-color: #1C3368;
+    border: none;
+    color:#E5E8F0;
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    padding: .8rem;
+    text-align: center;
+    text-decoration: none;
+  }
+
 h1{
     font-size: 2.4rem;
 }
 h2{
-    font-size: 1.8rem;
-    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: normal;
+    height: 6.4rem;
     }
+
 h6{
     font-size: 1rem;
 }
@@ -25,17 +42,22 @@ h6{
 }
 
 ul li {
-    font-size: 1.2rem;
+    color:#111E3D;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
 }
 
 ul[title]::before {
     content: attr(title);
-    display: block;
-    font-weight: bold;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    color: #121C2A;
 }
 
 /*section 6columns Grid for all*/
 section{
+    background-color:#E5E8F0;
     display: grid;
     grid-auto-rows: auto;
     grid-template-columns: repeat(6,1fr);
@@ -43,11 +65,8 @@ section{
     padding: 1.6rem;
 }
 
-section blockquote, header, h1, h2, h3, h4, h6, p, ul, .image-fit,  footer {
+section blockquote, header, h1, h2, h3, h4, h6, p, ul, .image-fit{
     grid-column: 1 / span 7;
-}
-.casestudy-link img {
-    width: 200px;
 }
 
 /*section full page color change for sections*/
@@ -58,24 +77,20 @@ section blockquote, header, h1, h2, h3, h4, h6, p, ul, .image-fit,  footer {
 /*section green background change for sections*/
 .green {
     background-color: teal;
-    color: white;
+    color: #E5E8F0;
 }
 .blue {
-    background-color: cadetblue;
+    background-color: #1C3368;
+    color: #E5E8F0;
 }
 
-/*section for top bar primary navigarion*/
-.topBar{
-    background-color:white;
-    border: solid 2px green;
-}
+/*HEADER MENU*/
 /*center logo icon*/
 .topBar img {
     grid-column-start: 3;
 }
-
+ /*hide text menu, show burger*/
 .topBar nav {
-    border: solid 2px red;
     grid-column-start: 6;
     overflow: hidden;
 }
@@ -85,12 +100,44 @@ section blockquote, header, h1, h2, h3, h4, h6, p, ul, .image-fit,  footer {
     display: none;
   }
 
-  /*display hamburger menu*/
+/*display hamburger menu*/
 .topBar nav a.icon {
     display: block;
     padding: 1.8rem 1rem;
+    color: #E5E8F0;
   }
 
+/* HEADER HERO STATEMENT*/
+.hero h1{  
+    /* mobile-mission=hero-statement */
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    color:  #2DFFC0;
+}
+.hero h3 {
+color: #E5E8F0;
+font-weight: 600;
+font-size: 2rem;
+line-height: 2.4rem;
+letter-spacing: -0.005em;
+}
+
+.hero img {
+    background-color: #1C3368;
+    grid-column: 4;
+    padding-right: 6rem;
+}
+/*images on hero page*/
+.casestudy-link img {
+    width: 20rem;
+    margin: 0rem 8rem;
+}
+/*FIX-->for the meantime until, I clean up background in PS*/
+.casestudy-link .side-img{
+    width: 20rem;
+    mix-blend-mode: multiply;
+}
 /*sectiion case study summary header*/
 .summary{
     border: solid 2px red;
@@ -158,11 +205,15 @@ figure img {
 }
 
 
-footer {
+.btm-bar{
+    background-color: cadetblue;
+    display: flex;
     font-size: .8rem;
+    height: 6.2rem;
 }
-footer img {
-    width: 64px;
+
+.btm-bar img {
+    padding-left: .5rem;    
 }
 
 /*to use for desktopView
