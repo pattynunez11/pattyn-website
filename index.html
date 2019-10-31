@@ -5,35 +5,36 @@
     <head>
       <title>Patty Nunez UXUI Designer</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="styles/reset.css">
       <link rel="stylesheet" href="styles/main.css">
       <script src="main.js"></script>
+      <link href='https://fonts.googleapis.com/css?family=Poppins'
+      rel='stylesheet'>
+  <link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
     <body>
       <!--primary navigation & logo-->
       <header>
-        <nav>
-          <img src="images/v2Logo-04.png" alt="Patty Nunez Logo PN disc"
-            width="80px" />
-
-          <a href="projects.html">Projects</a>
-          <a href="about.html">About</a>
-          <a href="contact.html">Contact</a>
-          <!--placer tempforNow
-              <a href="javascript:void(0);" class="icon"
-                  onclick="myFunction()">
-                  <i class="fa fa-bars"></i>
-              </a>-->
-        </nav>
-        <!---BEGIN HOME PAGE = hero message & caseStudy portfolio info link--->
-        <!--heroStatement-->
-        <section class="heroStatement">
-          <h1 class heroStatement>My name is Patty Nunez.</br>
-            I am a <abbr title="User Experience and User Interface">UX UI
-              Designer.</abbr></br>
-            I live in San Francisco, CA.</br>
-          </h1>
-          <h3 class="subHeroStatement">Designing interactions that connect
+          <section class="blue topBar">
+              <img class="logo-image" src="images/v2Logo-04.png"
+                  alt="Patty Nunez Logo PN disc" width="80px" />
+              <nav>
+                  <a href="projects.html">Projects</a>
+                  <a href="about.html">About</a>
+                  <a href="contact.html">Contact</a>
+                  <a href="javascript:void(0);" class="icon"
+                      onclick="myFunction()">
+                      <i class="fa fa-bars"></i>
+                  </a>
+              </nav>
+          </section>
+        <section class="hero">
+          <h1>My name is Patty Nunez.
+            I am a UX UI Designer.
+          I live in San Francisco, CA.<h1>
+          <h3>Designing interactions that connect
             users
             to products by understanding their intentions and discovering as
             many ahh moments.
@@ -42,17 +43,14 @@
       </header>
       <!--caseStudy link actionable item-->
       <article>
-        <section class="call-to-action-Scroll">
-          <div class="centerBlock"
-            aria-roledescription="text and button to scroll">
+        <section class="call-to-Scroll">
             <h4>Take a look at one of my case studies!<h4>
                 <button>
                   <img src="images/casestudy-1/Button/arrowScrollDown.svg" />
                 </button>
-          </div>
         </section>
         <!--homePage caseStudy gallery scrolling (future set-up)-->
-        <section class="link-detail-casestudy">
+        <section class="casestudy-link">
           <header>
             <img src="images/caseStudy-1/them_logoicon.svg" />
             <h2>An image gallery app on Android for photography enthusiasts.
@@ -62,8 +60,7 @@
                 alt="button view case study ">
             </button>
             <!--design role list-->
-            <ul>
-              <lh>Design Role</lh>
+            <ul title="Design Role">
               <li>UX Design</li>
               <li>UI Design</li>
               <li>Visual Design</li>
@@ -74,11 +71,16 @@
         </section>
       </article>
       <!--footer-->
-      <footer>
-        <p>Copy Rights Patty Nunez</p>
-        <p>Contact Info:pattyndesign@gmail.com</p>
-        <p>Social Media <img src="images/caseStudy-1/Social.svg" /></p>
-      </footer>
+      <section>
+          <footer>
+       
+           <p>&copy; Patty Nunez
+              Contact Info:pattyndesign@gmail.com
+            <img src="images/caseStudy-1/Social.svg" />
+           </p>
+      
+          </footer>
+      </section>
       <!--END HOME PAGE-->
     </body>
 

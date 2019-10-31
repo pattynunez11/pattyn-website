@@ -1,0 +1,172 @@
+/*add standard style to use for document*/
+
+*{box-sizing: border-box;}
+html{ 
+    font-size: 10px;
+}
+
+body{
+    background-color: burlywood;
+    font-family: Poppins, sans-serif;
+    font-size: 1.6rem;
+}
+h1{
+    font-size: 2.4rem;
+}
+h2{
+    font-size: 1.8rem;
+    font-weight: 700;
+    }
+h6{
+    font-size: 1rem;
+}
+.xsmall-text {
+    font-size: .8rem;
+}
+
+ul li {
+    font-size: 1.2rem;
+}
+
+ul[title]::before {
+    content: attr(title);
+    display: block;
+    font-weight: bold;
+}
+
+/*section 6columns Grid for all*/
+section{
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(6,1fr);
+    grid-gap: 8px;
+    padding: 1.6rem;
+}
+
+section blockquote, header, h1, h2, h3, h4, h6, p, ul, .image-fit,  footer {
+    grid-column: 1 / span 7;
+}
+.casestudy-link img {
+    width: 200px;
+}
+
+/*section full page color change for sections*/
+.fullPage{
+    border:solid 2px black;
+    margin:0;
+}
+/*section green background change for sections*/
+.green {
+    background-color: teal;
+    color: white;
+}
+.blue {
+    background-color: cadetblue;
+}
+
+/*section for top bar primary navigarion*/
+.topBar{
+    background-color:white;
+    border: solid 2px green;
+}
+/*center logo icon*/
+.topBar img {
+    grid-column-start: 3;
+}
+
+.topBar nav {
+    border: solid 2px red;
+    grid-column-start: 6;
+    overflow: hidden;
+}
+
+/*hide text menu for desktop*/
+.topBar nav a {
+    display: none;
+  }
+
+  /*display hamburger menu*/
+.topBar nav a.icon {
+    display: block;
+    padding: 1.8rem 1rem;
+  }
+
+/*sectiion case study summary header*/
+.summary{
+    border: solid 2px red;
+}
+
+/*section case study overview*/
+.overview{
+    border:solid 2px blue;
+}
+
+.overview .left {
+    grid-column: 1 / span 3 ;
+}
+.overview .right{
+    grid-column: 4 / span 6;
+}
+
+/*section problem and solution*/
+.spread-left-content{
+    grid-column: 1 /span 6; 
+    }
+.spread-right-content{
+    grid-column: 1 /span 6; 
+    }
+
+/*table for SWOT*/
+.tg-wrap table {
+    background-color: blue;
+    color: white;
+}
+
+.tg-wrap td {
+    border: 1px solid black;
+    font-size: 1rem;
+    padding: .3rem;
+}
+
+.tg-wrap .row-header {
+    border: 1px solid black;
+    background-color: white;
+    color: blue;
+}
+
+.tg-wrap .row-title {
+    border: 1px solid black;
+}
+/*instead of div div just used br and targeted for spacing*/
+br {
+    margin-bottom: 1rem;
+}
+
+/*wireframe summary figure*/
+figure {
+    grid-column: 1 / span 7;
+}
+figure img {
+    width: 16rem;
+}
+
+.next-row {
+    width: 100%;
+}
+.large-img-settings img{
+    width: 33rem;
+}
+
+
+footer {
+    font-size: .8rem;
+}
+footer img {
+    width: 64px;
+}
+
+/*to use for desktopView
+.topBar nav li{
+    display: inline;
+    padding: 8px;
+} */
