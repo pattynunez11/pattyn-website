@@ -7,6 +7,7 @@ html{
 
 body{
     background-color: #1C3368;
+    color: #1C3368;
     font-family: Poppins, sans-serif;
     font-size: 1.6rem;
 }
@@ -23,28 +24,58 @@ button {
     text-align: center;
     text-decoration: none;
   }
-
-h1{
-    font-size: 2.4rem;
+a {
+    color: #E5E8F0;
+    font-size: .9rem;
+    text-decoration: none;
 }
-h2{
-    font-size: 20px;
-    line-height: 24px;
-    font-weight: normal;
-    height: 6.4rem;
+h1{
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 3.2rem;
+    padding-bottom: 1rem;
+    letter-spacing: .05rem;
+}
+h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 2rem;
+    letter-spacing: .05rem;
     }
+h3 {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 2.2rem;
+        padding-bottom: 1rem;
+}
 
 h6{
     font-size: 1rem;
 }
 .xsmall-text {
     font-size: .8rem;
+    padding:0rem;
 }
 
+p {
+    line-height: 2rem;
+    padding-bottom: 1.6rem;
+}
+
+blockquote {
+font-style: italic;
+font-weight: 500;
+font-size: 1.8rem;
+line-height: 2.6rem;
+}
+.quoteCredit {
+  font-size: 1.2rem;
+   grid-column: 1 /span 7;
+}
 ul li {
     color:#111E3D;
     font-size: 1.6rem;
-    line-height: 2.4rem;
+    line-height: 2.25rem;
 }
 
 ul[title]::before {
@@ -54,7 +85,6 @@ ul[title]::before {
     line-height: 2.4rem;
     color: #121C2A;
 }
-
 /*section 6columns Grid for all*/
 section{
     background-color:#E5E8F0;
@@ -71,13 +101,12 @@ section blockquote, header, h1, h2, h3, h4, h6, p, ul, .image-fit{
 
 /*section full page color change for sections*/
 .fullPage{
-    border:solid 2px black;
     margin:0;
 }
 /*section green background change for sections*/
 .green {
-    background-color: teal;
-    color: #E5E8F0;
+    background-color: #33E1AC;
+    color: #1C3368;
 }
 .blue {
     background-color: #1C3368;
@@ -128,25 +157,21 @@ letter-spacing: -0.005em;
     grid-column: 4;
     padding-right: 6rem;
 }
+.casestudy-link {
+    padding-bottom: 0;
+    }
 /*images on hero page*/
 .casestudy-link img {
     width: 20rem;
-    margin: 0rem 8rem;
 }
 /*FIX-->for the meantime until, I clean up background in PS*/
 .casestudy-link .side-img{
     width: 20rem;
+    margin: 1.2rem 0rem 0rem 16rem;
     mix-blend-mode: multiply;
-}
-/*sectiion case study summary header*/
-.summary{
-    border: solid 2px red;
 }
 
 /*section case study overview*/
-.overview{
-    border:solid 2px blue;
-}
 
 .overview .left {
     grid-column: 1 / span 3 ;
@@ -165,28 +190,42 @@ letter-spacing: -0.005em;
 
 /*table for SWOT*/
 .tg-wrap table {
-    background-color: blue;
-    color: white;
+    background-color: #1C3368;
+    color: #E5E8F0;
+    border: solid .2rem #1C3368;
+    border-bottom: solid .2rem #E5E8F0;
 }
 
 .tg-wrap td {
-    border: 1px solid black;
-    font-size: 1rem;
-    padding: .3rem;
+    border: .1rem solid #E5E8F0;
+    font-size: 1.05rem;
+    font-weight: lighter;
+    letter-spacing: .05rem;
+    line-height: 1.2rem;
+    padding: .8rem .5rem;
+    vertical-align: center;
+}
+.tg-wrap .table-title {
+    border: .2rem solid #1C3368;
+    background-color: #E5E8F0;
+    color: #1C3368;
+    text-align: left;
+}
+.tg-wrap .table-title th {
+    border: .2rem solid #1C3368;
+    padding: .8rem .5rem;
+
 }
 
 .tg-wrap .row-header {
-    border: 1px solid black;
-    background-color: white;
-    color: blue;
-}
-
-.tg-wrap .row-title {
-    border: 1px solid black;
+    background-color: #E5E8F0;
+    color: #1C3368;
+    text-align: center;
+    border: solid .2rem #1C3368
 }
 /*instead of div div just used br and targeted for spacing*/
 br {
-    margin-bottom: 1rem;
+    margin-bottom: 1.6rem;
 }
 
 /*wireframe summary figure*/
@@ -206,14 +245,15 @@ figure img {
 
 
 .btm-bar{
-    background-color: cadetblue;
-    display: flex;
+    display: inline-flex;
     font-size: .8rem;
     height: 6.2rem;
+    justify-content: space-evenly;
+    margin-top: 0;
 }
-
-.btm-bar img {
-    padding-left: .5rem;    
+.btm-bar p{
+    margin: 3.2rem;
+    line-height: 1rem;
 }
 
 /*to use for desktopView
