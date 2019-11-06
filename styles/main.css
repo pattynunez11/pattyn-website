@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 /*add standard style to use for document*/
 
 *{box-sizing: border-box;}
@@ -8,8 +10,9 @@ html{
 body{
     background-color: #1C3368;
     color: #1C3368;
-    font-family: Poppins, sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 1.6rem;
+    font-style: normal;
 }
 /*button primary*/
 button {
@@ -24,32 +27,38 @@ button {
     text-align: center;
     text-decoration: none;
   }
+
 a {
-    color: #E5E8F0;
-    font-size: .9rem;
+    color: #FF28B1;
     text-decoration: none;
 }
 h1{
     font-size: 3rem;
     font-weight: 700;
     line-height: 3.2rem;
-    padding-bottom: 1rem;
     letter-spacing: .05rem;
+    padding-bottom: 1rem;
 }
-h2 {
+ h2 {
     font-size: 2.4rem;
     font-weight: 700;
     line-height: 2rem;
     letter-spacing: .05rem;
+    padding-top: 2.4rem;
     }
-h3 {
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 2.2rem;
-        padding-bottom: 1rem;
-}
 
-h6{
+h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: .02rem;
+    line-height: 2.4rem;
+}
+h4 {
+    font-size: 1.8rem;
+    font-weight: normal;
+    line-height: 2rem;
+}
+h6 {
     font-size: 1rem;
 }
 .xsmall-text {
@@ -62,29 +71,76 @@ p {
     padding-bottom: 1.6rem;
 }
 
+figure {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+}
+
 blockquote {
+color: #FF28B1;
 font-style: italic;
 font-weight: 500;
 font-size: 1.8rem;
 line-height: 2.6rem;
+padding-bottom: 1.6rem;
 }
 .quoteCredit {
   font-size: 1.2rem;
-   grid-column: 1 /span 7;
-}
-ul li {
-    color:#111E3D;
-    font-size: 1.6rem;
-    line-height: 2.25rem;
+  grid-column: 1 /span 7;
 }
 
+ul{
+ padding-bottom:1.6rem;
+ width: 85vmin;
+}
+
+ul li {
+    color: #1C3368;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    font-weight: 200;
+    padding-left: 1.2rem;
+}
+/*NUM list*/
+.blue ol{
+    padding-bottom:1.6rem;
+   }
+   
+.blue ol li {
+       color: #1C3368;
+       font-size: 1.4rem;
+       line-height: 2rem;
+       font-weight: 200;
+       padding-left: 1.2rem;
+       list-style-position: inside;
+       
+   }
+
+/*add title to the list*/
 ul[title]::before {
     content: attr(title);
-    font-weight: 600;
-    font-size: 1.8rem;
+    font-weight: normal;
+    font-size: 2.0rem;
     line-height: 2.4rem;
     color: #121C2A;
 }
+/*add bullets / checks to the list & diff colors*/
+.sym-blue ::before{
+    color: #1C3368;
+    content: "• ";
+}
+
+.sym ::before{
+    color:#E5E8F0;
+    content: "• ";
+}
+
+.check ::before{
+    color: #1C3368;
+    content: "\2713";
+    padding: .5rem;
+}
+
 /*section 6columns Grid for all*/
 section{
     background-color:#E5E8F0;
@@ -94,25 +150,45 @@ section{
     grid-gap: 8px;
     padding: 1.6rem;
 }
-
-section blockquote, header, h1, h2, h3, h4, h6, p, ul, .image-fit{
+/*allowing elements to spread to right margin*/
+section blockquote, header, h1, h2, h3, h4, h6, p, ul {
     grid-column: 1 / span 7;
 }
 
-/*section full page color change for sections*/
-.fullPage{
-    margin:0;
+/*controling the size of the images viewer*/
+.image-fit {
+    width: 80vmin;
 }
-/*section green background change for sections*/
+
+/*section Green background changes for sections and lists*/
 .green {
     background-color: #33E1AC;
     color: #1C3368;
 }
+
+.green ul li{
+    color: #1C3368;
+}
+
+.green ul[title]::before{
+    color: #1C3368;
+}
+
+/*section Blue background changes for sections and lists*/
 .blue {
     background-color: #1C3368;
     color: #E5E8F0;
 }
-
+.blue ul li{
+    color: #E5E8F0;
+}
+.blue .action-list ul ::before {
+    content: "\271A";
+    color: #E5E8F0;
+}
+.blue ul[title]::before {
+    color: #E5E8F0;
+}
 /*HEADER MENU*/
 /*center logo icon*/
 .topBar img {
@@ -146,17 +222,23 @@ section blockquote, header, h1, h2, h3, h4, h6, p, ul, .image-fit{
 }
 .hero h3 {
 color: #E5E8F0;
-font-weight: 600;
+font-weight: regular;
 font-size: 2rem;
-line-height: 2.4rem;
-letter-spacing: -0.005em;
+line-height: 2.8rem;
+letter-spacing: .05rem;
+padding: 0;
 }
 
+.hero p {
+    text-align: center;
+    padding-top: 3.2rem;
+}
 .hero img {
     background-color: #1C3368;
     grid-column: 4;
     padding-right: 6rem;
 }
+/*gallery home page section for casestudy*/
 .casestudy-link {
     padding-bottom: 0;
     }
@@ -164,7 +246,7 @@ letter-spacing: -0.005em;
 .casestudy-link img {
     width: 20rem;
 }
-/*FIX-->for the meantime until, I clean up background in PS*/
+/*Adding blen-mode to images temp FIX-->for the meantime until, I clean up background in PS*/
 .casestudy-link .side-img{
     width: 20rem;
     margin: 1.2rem 0rem 0rem 16rem;
@@ -172,12 +254,16 @@ letter-spacing: -0.005em;
 }
 
 /*section case study overview*/
-
+/*for two col in desktop*/
 .overview .left {
     grid-column: 1 / span 3 ;
 }
 .overview .right{
     grid-column: 4 / span 6;
+}
+
+.overview ul[title]::before{
+    color:#1C3368;
 }
 
 /*section problem and solution*/
@@ -228,6 +314,73 @@ br {
     margin-bottom: 1.6rem;
 }
 
+/*Key Market Validation*/
+
+/*stat stles here*/
+.statInfo {
+    row-gap: 1.2rem;
+    color: #E5E8F0;
+}
+.statInfo h2 {
+    padding-top: 3.2rem;
+}
+.statInfo p {
+    line-height: 1.6rem;
+    padding-bottom: 0rem;
+    }
+.stat-green{
+        color: #1C3368;
+    }
+.statInfo .xsmall-text {
+    padding-bottom: 1.6rem;
+}
+.stat ul[title]::before{
+    color:#E5E8F0;
+}
+.stat li {
+    color: #E5E8F0;
+    font-size: 1.8rem;
+    letter-spacing: .05rem;
+    line-height: 2.4rem;
+    font-style: italic;
+    padding-bottom: 1.6rem;
+    border-left: .2rem solid #33E1AC;
+}
+
+.percent{
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding-right: 1.5rem;
+}
+.green-list li{
+    color: #1C3368;
+    font-style: initial;
+}
+.action-list li {
+    color: #E5E8F0;
+}
+.action-list ::before {
+    content: "\271A";
+    color: #E5E8F0;
+}
+
+/*personas*/
+.block-name {
+    background-color: #1C3368;
+    color: #E5E8F0;
+    padding: 1.6rem 0rem 0rem 1.2rem;
+    width: 20vh;
+    vertical-align: center;
+}
+
+.persona ul li {
+    padding: 0rem;
+    color: #1C3368;
+}
+.persona img {
+    border-bottom:.2rem solid #FF28B1;
+}
+
 /*wireframe summary figure*/
 figure {
     grid-column: 1 / span 7;
@@ -243,19 +396,54 @@ figure img {
     width: 33rem;
 }
 
+/*adding flex to the images*/
+.stack{
+    display:flexbox;
+    justify-content: start;
+    margin: 1.6rem;
+    padding-bottom: .8rem;
+    flex-wrap: wrap;
+}
 
+.stack img{
+    padding: .2rem;
+}
+.stack :first-child {
+    padding-left: 6rem;
+}
+.stack :nth-last-child(2) {
+    padding-left: .75rem;
+}
+.stack-last{
+    display:flexbox;
+    justify-content: start;
+    margin-left: 9rem;
+    padding-bottom: .8rem;
+    flex-wrap: wrap;
+}
+.stack-last :last-child {
+    margin-left: 2.3rem;
+}
+
+/* adding flex to the footer*/
 .btm-bar{
     display: inline-flex;
     font-size: .8rem;
-    height: 6.2rem;
     justify-content: space-evenly;
     margin-top: 0;
 }
 .btm-bar p{
-    margin: 3.2rem;
+    padding: 1.6rem;
     line-height: 1rem;
+    flex-shrink: 0;
 }
 
+footer img {
+    width: 11rem;
+}
+
+
+/*for responsive menu*/
 /*to use for desktopView
 .topBar nav li{
     display: inline;
