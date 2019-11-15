@@ -3,16 +3,48 @@
 /*add standard style to use for document*/
 
 *{box-sizing: border-box;}
+
 html{ 
     font-size: 10px;
 }
 
-body{
+body {
     background-color: #1C3368;
     color: #1C3368;
     font-family: 'Poppins', sans-serif;
     font-size: 1.6rem;
     font-style: normal;
+    margin: 0;
+    overflow-x: hidden;
+    width: auto 0rem;
+}
+
+/*section 6columns Grid for all*/
+section{
+    background-color:#E5E8F0;
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(6,1fr);
+    grid-gap: 8px;
+    margin: 0rem;
+    padding:1.6rem 1.6rem;
+    width: 36rem;
+}
+
+/*allowing elements to spread to right margin*/
+section, header, .blue, h1, h2, h3, h4, h6, ul {
+    grid-column: 1 / span 7;
+}
+
+/*controling the size of the images viewer*/
+.image-fit {
+    width: 50vmin;
+    grid-column: 1 / span 6;
+}
+
+.largeCenter {
+    width: 75vw;
+    align-content: center;
 }
 /*button primary*/
 button {
@@ -22,11 +54,12 @@ button {
     cursor: pointer;
     font-size: 1.6rem;
     font-weight: 600;
-    margin-bottom: 1.2rem;
+    margin: 1.2rem 0rem 1.2rem 0rem;
     padding: .8rem;
     text-align: center;
     text-decoration: none;
   }
+
 
 a {
     color: #FF28B1;
@@ -46,7 +79,6 @@ h1{
     letter-spacing: .05rem;
     padding-top: 2.4rem;
     }
-
 h3 {
     font-size: 2rem;
     font-weight: bold;
@@ -61,6 +93,16 @@ h4 {
 h6 {
     font-size: 1rem;
 }
+blockquote {
+    color: #FF28B1;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    padding-bottom: 1.6rem;
+    grid-column: 1 / span 6;
+    }
+
 .xsmall-text {
     font-size: .8rem;
     padding:0rem;
@@ -69,29 +111,68 @@ h6 {
 p {
     line-height: 2rem;
     padding-bottom: 1.6rem;
+    padding-right: 1rem;
+    grid-column: 1 / 7;
 }
 
 figure {
     font-size: 1.2rem;
     line-height: 1.6rem;
+    margin: 0;
+    font-size: 1.1rem;
+}
+figure img {
+    width: 2.3rem;
 }
 
-blockquote {
+.hero {
+    background-color: #1C3368;
+    color: #E5E8F0;
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(6,1fr);
+    grid-gap: 8px;
+    margin: 0rem;
+    padding:1.6rem;
+    width: 34.2rem;
+}
+
+.blue {
+    background-color: #1C3368;
+    color: #E5E8F0;
+    display: grid;
+    grid-auto-rows: auto;
+    grid-template-columns: repeat(6,1fr);
+    grid-gap: 8px;
+    margin: 0rem;
+    padding:1.6rem;
+    width: 34.2rem;
+}
+
+.blue blockquote {
 color: #FF28B1;
 font-style: italic;
 font-weight: 500;
 font-size: 1.8rem;
 line-height: 2.6rem;
 padding-bottom: 1.6rem;
+grid-column: 1 / span 6;
 }
+
+.green {
+    background-color: #33E1AC;
+    color: #1C3368;
+    display: grid;
+}
+
 .quoteCredit {
   font-size: 1.2rem;
-  grid-column: 1 /span 7;
 }
+
 
 ul{
  padding-bottom:1.6rem;
- width: 85vmin;
+ padding-right: 1rem;
 }
 
 ul li {
@@ -108,7 +189,7 @@ ul li {
    
 .blue ol li {
        color: #1C3368;
-       font-size: 1.4rem;
+       font-size: 1.3rem;
        line-height: 2rem;
        font-weight: 200;
        padding-left: 1.2rem;
@@ -119,12 +200,16 @@ ul li {
 /*add title to the list*/
 ul[title]::before {
     content: attr(title);
-    font-weight: normal;
-    font-size: 2.0rem;
+    font-weight: 700;
+    font-size: 1.6rem;
     line-height: 2.4rem;
     color: #121C2A;
 }
 /*add bullets / checks to the list & diff colors*/
+
+.sym-blue ul {
+    grid-column: 1 / span 6;
+} 
 .sym-blue ::before{
     color: #1C3368;
     content: "• ";
@@ -138,32 +223,12 @@ ul[title]::before {
 .check ::before{
     color: #1C3368;
     content: "\2713";
-    padding: .5rem;
-}
-
-/*section 6columns Grid for all*/
-section{
-    background-color:#E5E8F0;
-    display: grid;
-    grid-auto-rows: auto;
-    grid-template-columns: repeat(6,1fr);
-    grid-gap: 8px;
-    padding: 1.6rem;
-}
-/*allowing elements to spread to right margin*/
-section blockquote, header, h1, h2, h3, h4, h6, p, ul {
-    grid-column: 1 / span 7;
-}
-
-/*controling the size of the images viewer*/
-.image-fit {
-    width: 80vmin;
+    padding-right: .5rem;
 }
 
 /*section Green background changes for sections and lists*/
-.green {
-    background-color: #33E1AC;
-    color: #1C3368;
+.green ul {
+    width: 90vw;
 }
 
 .green ul li{
@@ -175,10 +240,7 @@ section blockquote, header, h1, h2, h3, h4, h6, p, ul {
 }
 
 /*section Blue background changes for sections and lists*/
-.blue {
-    background-color: #1C3368;
-    color: #E5E8F0;
-}
+
 .blue ul li{
     color: #E5E8F0;
 }
@@ -191,26 +253,46 @@ section blockquote, header, h1, h2, h3, h4, h6, p, ul {
 }
 /*HEADER MENU*/
 /*center logo icon*/
-.topBar img {
-    grid-column-start: 3;
-}
  /*hide text menu, show burger*/
-.topBar nav {
-    grid-column-start: 6;
+
+
+/*hide text menu for desktop*/
+.navigation {
+    display: flex;
+    justify-content: right;
+    width: 34rem; 
+    padding-right: 0rem;
+}
+.navigation div{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    width: 22rem;
+}
+nav {
     overflow: hidden;
 }
 
-/*hide text menu for desktop*/
-.topBar nav a {
+nav a {
     display: none;
   }
 
+
 /*display hamburger menu*/
-.topBar nav a.icon {
+nav a.icon {
     display: block;
-    padding: 1.8rem 1rem;
+    padding: 1.6rem 1rem;
     color: #E5E8F0;
+    align-self: center;
+    flex-shrink: 0;
   }
+
+.logo-image {
+    width: 28vw;
+    flex-shrink: 0;
+    align-self: center;
+}
+
 
 /* HEADER HERO STATEMENT*/
 .hero h1{  
@@ -226,7 +308,7 @@ font-weight: regular;
 font-size: 2rem;
 line-height: 2.8rem;
 letter-spacing: .05rem;
-padding: 0;
+padding-bottom: 3.2rem;
 }
 
 .hero p {
@@ -239,18 +321,32 @@ padding: 0;
     padding-right: 6rem;
 }
 /*gallery home page section for casestudy*/
+
 .casestudy-link {
-    padding-bottom: 0;
-    }
-/*images on hero page*/
-.casestudy-link img {
-    width: 20rem;
+    width: 36rem;
 }
+.casestudy-link img {
+    width: 60vw;
+    padding: 1.6rem 0rem 1.6rem 0rem;
+    margin: 0rem;
+    }
+
 /*Adding blen-mode to images temp FIX-->for the meantime until, I clean up background in PS*/
-.casestudy-link .side-img{
-    width: 20rem;
-    margin: 1.2rem 0rem 0rem 16rem;
-    mix-blend-mode: multiply;
+.casestudy-img {
+    width: 24vw;
+    margin-bottom: 1.6rem;
+    margin-left: 10rem;
+}
+
+.casestudy-link .side-img {
+    padding: 0rem;
+}
+
+.side-img {
+    border-radius: 4rem;
+    box-shadow: 1px 1px 15px rgba(29, 23, 23, .3);
+    padding: 0rem;
+    width: 40vw;
 }
 
 /*section case study overview*/
@@ -274,40 +370,84 @@ padding: 0;
     grid-column: 1 /span 6; 
     }
 
-/*table for SWOT*/
-.tg-wrap table {
-    background-color: #1C3368;
-    color: #E5E8F0;
-    border: solid .2rem #1C3368;
-    border-bottom: solid .2rem #E5E8F0;
+/*User Flows*/
+.widthClass div{
+    grid-column: 1 /span 7;
+}
+.widthClass img {
+    width: 80vw;
+    grid-column: 1 / span 7;
 }
 
+.side-side{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0rem;
+}
+
+.side-side img {
+    width: 40vw;
+    padding: 1rem .4rem;
+    align-self: center;
+}
+
+.side-side figcaption {
+    width: 68vw;
+    align-self: center;
+    font-size: 1.1rem;
+    padding-bottom: 1.6rem;
+}
+
+/*table*/
+
+.tableWrap{
+    margin-top: 1.6rem;
+    margin-left:0rem;
+}
+.tg-wrap {
+    background-color: #1C3368;
+    color: #E5E8F0;
+    border-bottom: solid .1rem #E5E8F0;
+    margin: 0rem;
+}
+
+.tg-wrap tr {   
+    padding: 0rem;
+    border: 0rem;
+}
 .tg-wrap td {
-    border: .1rem solid #E5E8F0;
-    font-size: 1.05rem;
+    border: solid .1rem #E5E8F0;
+    font-size: 1rem;
     font-weight: lighter;
     letter-spacing: .05rem;
     line-height: 1.2rem;
-    padding: .8rem .5rem;
+    padding:.3rem;
     vertical-align: center;
 }
-.tg-wrap .table-title {
-    border: .2rem solid #1C3368;
+.table-title {
+    border: .1rem solid #1C3368;
     background-color: #E5E8F0;
     color: #1C3368;
     text-align: left;
-}
-.tg-wrap .table-title th {
-    border: .2rem solid #1C3368;
-    padding: .8rem .5rem;
-
+    font-size: 1.6rem;
+    
+ 
 }
 
-.tg-wrap .row-header {
+
+.table-title th {
+    border: .1rem solid #1C3368;
+    padding:.5rem;
+    border-right: 0rem;
+}
+
+ .row-header {
     background-color: #E5E8F0;
     color: #1C3368;
     text-align: center;
-    border: solid .2rem #1C3368
+    border: solid .2rem #1C3368;
+    padding-right: 0rem;
 }
 /*instead of div div just used br and targeted for spacing*/
 br {
@@ -356,6 +496,11 @@ br {
     color: #1C3368;
     font-style: initial;
 }
+.action-list {
+    grid-column: 1 / 6;
+}
+
+
 .action-list li {
     color: #E5E8F0;
 }
@@ -365,25 +510,26 @@ br {
 }
 
 /*personas*/
+.persona{
+    display: grid;
+}
 .block-name {
     background-color: #1C3368;
     color: #E5E8F0;
     padding: 1.6rem 0rem 0rem 1.2rem;
-    width: 20vh;
+    width: 40vw;
+    grid-column: 1 / span 6;
     vertical-align: center;
 }
 
-.persona ul li {
-    padding: 0rem;
-    color: #1C3368;
-}
 .persona img {
     border-bottom:.2rem solid #FF28B1;
+    grid-column: 1 / span 6;
 }
 
 /*wireframe summary figure*/
 figure {
-    grid-column: 1 / span 7;
+    grid-column: 1 / span 6;
 }
 figure img {
     width: 16rem;
@@ -400,13 +546,13 @@ figure img {
 .stack{
     display:flexbox;
     justify-content: start;
-    margin: 1.6rem;
+    margin: 1rem;
     padding-bottom: .8rem;
     flex-wrap: wrap;
 }
 
 .stack img{
-    padding: .2rem;
+    padding-left: .2rem;
 }
 .stack :first-child {
     padding-left: 6rem;
@@ -425,23 +571,26 @@ figure img {
     margin-left: 2.3rem;
 }
 
+/*usability testing*/
+
 /* adding flex to the footer*/
-.btm-bar{
-    display: inline-flex;
-    font-size: .8rem;
-    justify-content: space-evenly;
-    margin-top: 0;
+.btm-bar {
+    display: flex;
+    height: 3.2rem;
+    justify-content: left;
 }
 .btm-bar p{
-    padding: 1.6rem;
-    line-height: 1rem;
+    align-self: center;
+    line-height: 1.2rem;
     flex-shrink: 0;
+    font-size: 1.2rem;
+    padding: 0rem;
 }
 
-footer img {
-    width: 11rem;
+.btm-bar img{
+    width: 22vw;
+    padding: 0rem;
 }
-
 
 /*for responsive menu*/
 /*to use for desktopView

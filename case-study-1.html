@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" > 
+    
     <html>
 
         <head>
@@ -15,26 +16,28 @@
 
         <body>
             <!--primary navigation-->
-            <header>
-                <section class="blue topBar">
-                    <img class="logo-image" src="images/v2Logo-04.png"
-                        alt="Patty Nunez Logo PN disc" width="80rem" />
-                    <nav>
-                        <a href="projects.html">Projects</a>
-                        <a href="about.html">About</a>
-                        <a href="contact.html">Contact</a>
-                        <a href="javascript:void(0);" class="icon"
-                            onclick="myFunction()">
-                            <img src="images/burger.svg" />
-                        </a>
-                    </nav>
-                </section>
-            </header>
+         
+            <section class="blue navigation">
+                    <div>
+                       <img class="logo-image" src="images/v2Logo-04.png"
+                           alt="Patty Nunez Logo PN disc" width="80px" />
+                    </div>     
+                       <nav>
+                           <a href="projects.html">Projects</a>
+                           <a href="about.html">About</a>
+                           <a href="contact.html">Contact</a>
+                           <a href="javascript:void(0);" class="icon"
+                               onclick="myFunction()">
+                               <img src="images/burger.svg" />
+                           </a>
+                       </nav>
+                  </section>
+           
             <!--case study header-->
-            <article>
+            
                 <section class="summary">
                     <header>
-                        <h1 class="logoLobster">Them Photos</h1>
+                        <h1>Them Photos</h1>
                         <h3>An image gallery app on Android for photography enthusiasts.</h3>
                             <button>
                                     View prototype
@@ -42,7 +45,7 @@
                     </header>
                 </section>
                 <!--overview-->
-                <section class="overview">
+                <section>
                     <h1>Overview</h1>
                     <p>The project was initiated by exploring the possibilities
                         in the cloud
@@ -79,7 +82,7 @@
 
                 </section>
                 <!--problem solution-->
-                <section class="fullPage green">
+                <section class="green">
 
                     <h2>Problem</h2>
                     <p>Users had minimal time invested into photos being stored.
@@ -93,12 +96,12 @@
                         target market therefore retaining them onto one
                         platform.</p>
                 </section>
-            </article>
+           
             <!--START DISCOVERY phase-->
-            <article>
+            
                 <section>
                     <header>
-                        <h1>The Discovery Phase</h1>
+                        <h1>Discovery Phase</h1>
                     </header>
                     <h2>Innovation Intent</h2>
                     <p>To create a cloud photo storage space for photographers,
@@ -122,6 +125,7 @@
                 <!--swot diagram table-->
                 <div class="tg-wrap">
                     <table>
+                      <tbody>  
                         <tr class="row-title">
                             <th colspan="4">SWOT for Photo Cloud Services</th>
                         </tr>
@@ -214,11 +218,11 @@
                                 other services <br>
                             </td>
                         </tr>
+                      </tbody>
                     </table>
                 </div>
-                </section>
                 <!--market validation-->
-                <section class="blue statInfo">
+                <section class="blue">
                         <h2>Key Market Validation</h2>
                     
                     <p cite="https://www.nytimes.com/2018/11/29/style/digital-photo-storage-purge.html">
@@ -254,7 +258,7 @@
                         alt="ven image middle area to target users" />
                 </section>
                 <!--user survery stats-->
-                <section class="green stat-green">
+                <section class="green">
                                 <h2>User Survey</h2>
                                 <p>After a comparative analysis, I wanted to find out target users' response to initial discoveries. I focused the user survey on:
                                 </p>
@@ -269,20 +273,18 @@
                     </ul>
                     <ul title="Users would like">
                         <li><span class="percent">100%</span>Social Media Integration</li>
-                        <li><span class="percent">75%</span> Free Bloggin site</li>
+                        <li><span class="percent">75%</span> Free blogging site</li>
                     </ul>
                     <ul title="How most users organize photos">
                         <li><span class="percent">100%</span>Files / Folders / Subfolders</li>
                     </ul>
                     <h3>Actions To Take</h3>
                             <ul class ="action-list green-list">
-                            <li>Organizing files is of high importance
-                            <li>Control over files, folders, and subfolders is
-                                high</li>
-                            <li>Social media easily integrated into cloud
+                            <li>Organization tools for files
+                            <li>Ensure user access to control files</li>
+                            <li>Integrate social media into cloud
                                 service</li>
-                            <li>Will not pay extra for space, indicates room to
-                                improve</li>
+                            <li>Room to improve in target user first app</li>
                         </ul>
                 </section>
 
@@ -383,6 +385,7 @@
                         <p> After reviewing User Stories, I selected the highpriorities as guides in User Flows and begin todevelope features for Them Photos App.
                         </p>
                 </section>
+              
                 <div class="tg-wrap">
                     <table>
                         <tr class="row-header">
@@ -421,6 +424,8 @@
                             </td>
                         </tr>
                     </table>
+                </div>
+               
                     <!--user flows-->
                     <section>
                             <h2>User Flows</h2>
@@ -438,13 +443,14 @@
                                 is an example of
                                 separating the tasks within the share tasks.
                             </p>
-                   
+                        </section>
                     <!--user flow diagram need to fix responsive issue in next checkpoint-->
-                        <div class="userFlowDiagram">
-                            <img class="image-fit"
+                    <section>
+                        <div class="widthClass">
+                            <img
                                 src="images/caseStudy-1/flowFig1.svg"
                                 alt="diagram of user flow for sharing photos" />
-                            <img class="image-fit"
+                            <img
                                 src="images/caseStudy-1/flowFig2.svg"
                                 alt="diagram of user for organizing photos" />
                         </div>
@@ -453,7 +459,7 @@
             </article>
             <!--START VISUAL DESIGN & INTERFACE-->
 
-            <article>
+            
                 <section>
                       <h1>Visual Design</h1>   
                 <!--sketches to wireframes-->
@@ -500,8 +506,8 @@
                             together. To develope them with some
                             basic patterns. Here is the <a
                                 href="#">click-able</a> prototype.</p>
-                    <figure>
-                        <!--figma slow ---------
+                   <!-- <figure>
+                        figma slow ---------
                                  <iframe style="border: none;"
                                         width="350" height="650"
                                         src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FmH2e8ggPWLcrDJjsjndnO7%2FCloudCrowd-WireFraming%3Fnode-id%3D2657%253A2630%26viewport%3D1332%252C294%252C0.3460161089897156%26scaling%3Dmin-zoom"
@@ -511,7 +517,7 @@
                     <h6>Task</h6>
                     <p>Upload photos from your phone to the
                         cloud service.</p>
-                    <figure class="leftSide">
+                    <figure class="side-side">
                         <img src="images/caseStudy-1/clickable-1.svg" />
                         <img src="images/caseStudy-1/clickable-1.svg" />
                         <figcaption>After sign-up users landed on
@@ -527,7 +533,7 @@
                     <h6>Task</h6>
                     <p>Finish and go back to the dashboard</p>
                     </div>
-                    <figure class="rightSide">
+                    <figure class="side-side">
                         <img src="images/caseStudy-1/clickable-3.svg"
                             alt="image of uploading photos" />
                         <img src="images/caseStudy-1/clickable-4.png"
@@ -554,7 +560,7 @@
                 </section>
             </article>
             <!--branding ahh moment concept-->
-            <article>
+            
                 <section>
                     <h1>Branding</h1>
                     <h2>Ahh Moment</h2>
@@ -586,7 +592,7 @@
                     </figure>
                 </section>
                 <section>
-                    <h3>Logo, Color and Typeface at Work</h3>
+                    <h3>Logo, Color and Typeface</h3>
                     <img src="images/caseStudy-1/themPhotoslogo.svg"
                         alt="logo for them photos pink T" />
                     <!-- for now removing to figure out grid>
@@ -598,14 +604,14 @@
                     </p>
                     <!------NOT THE FULL IMAGE OF THE CASESTUDY-->
                     <figure>
-                        <img src="images/caseStudy-1/phone and tree.png"
+                        <img class="largeCenter" src="images/caseStudy-1/phone and tree.png"
                             alt="logo on the phone and logo typeface" />
                     </figure>
                 </section>
             </article>
 
             <!--mockup and usability testing <li>> and improvements-->
-            <article>
+            
                 <section class="blue">
                         <h2>Usability Testing </h2>
                         <p>After the usability testing on the wireframe
@@ -641,7 +647,7 @@
                         <p>A quick preference test to get insight to color
                             preferences. This assisted in focusing my efforts to
                             create minimal color on the next High Fidity. </p>
-                    <figure>
+                    <figure class="side-side">
                         <img src="images/caseStudy-1/A/image 8.png"
                             alt="choice A won the preference test" />
                         <img src="images/caseStudy-1/A/image 7.png"
@@ -656,8 +662,7 @@
                     <p>I took another look at patterns in Material Design for
                         solutions to interface patterns. Also to add familiarity
                         to Them Photos App. </p>
-                    <ul title="Add interface element for user control and
-                        affordances">
+                    <ul title="Add interface for user affordance">
                         <ol>
                             <li>Menu top bar and bottom at empty state</li>
                             <li>Typography changed to Roboto for familiarity
@@ -668,8 +673,7 @@
                         </ol>
                     </ul>
 
-                    <ul title="Clean up visual design -typeface and color
-                        require more attention">
+                    <ul title="Clean up visual design">
                         <ol>
                             <li> The arrow to go back to the Dashboard</li>
                             <li> Tab menu for different views</li>
@@ -677,11 +681,10 @@
                             <li>Minimized color and typeface variations</li>
                         </ol>
                     </ul>
-                    <img src="images/caseStudy-1/resultsHighMockups.png"
-                        alt="prototype of app" class="image-fit">
+                    <img class="largeCenter" src="images/caseStudy-1/resultsHighMockups.png"
+                        alt="prototype of app">
 
-                    <ul title="Further research into Material Design for patterns to help
-                        with chunking and familiarity">
+                    <ul title="Research results into patterns">
                         <ol>
                             <li>Floating action button made it clearer to select
                                 an action</li>
@@ -692,9 +695,9 @@
                 </section>
             </article>
             <!--conclusion-->
-            <article>
+            
                 <section>
-                    <header>
+                    
                         <h1>Conclusion</h1>
                         <p>Expereimenting with the interface by chunking tasks
                             is
@@ -702,7 +705,7 @@
                             people that want to have control over their photos.
                             Have
                             access by having the features on their task bar.</p>
-                    </header>
+                    
                     <h3>Takeaways</h3>
                     <ul class="sym-blue">
                         <li> Material Design’s UI System is a good place to
@@ -712,13 +715,16 @@
                     </ul>
                 </section>
             </article>
-             <!--footer-->
+              <!--footer-->
           <footer class="blue btm-bar">
-                <p> &copy; Patty Nunez </p>
+                <p>&copy; Patty Nunez</p>
                 <p> <a href="mailto:pattyndesign@gmail.com">pattyndesign@gmail.com </a>
               </p>
-              <img src="images/caseStudy-1/Social.svg" /> 
+              <p>
+               <img src="images/caseStudy-1/Social.svg" /> 
+              </p>
                  </footer>
+             <!--END HOME PAGE-->
 
         </body>
 
