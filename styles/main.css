@@ -15,8 +15,7 @@ body {
     font-size: 1.6rem;
     font-style: normal;
     margin: 0;
-    overflow-x: hidden;
-    width: auto 0rem;
+    width: 0rem auto;
 }
 
 /*section 6columns Grid for all*/
@@ -28,7 +27,7 @@ section{
     grid-gap: 8px;
     margin: 0rem;
     padding:1.6rem 1.6rem;
-    width: 36rem;
+    width: 0rem auto;
 }
 
 /*allowing elements to spread to right margin*/
@@ -83,16 +82,23 @@ h3 {
     font-size: 2rem;
     font-weight: bold;
     letter-spacing: .02rem;
-    line-height: 2.4rem;
+    line-height: 2.4rem;   
 }
 h4 {
     font-size: 1.8rem;
     font-weight: normal;
     line-height: 2rem;
 }
+h5 {
+    font-size: 1.6rem;
+    line-height: 1.6rem;
+}
+
 h6 {
     font-size: 1rem;
 }
+
+
 blockquote {
     color: #FF28B1;
     font-style: italic;
@@ -134,7 +140,7 @@ figure img {
     grid-gap: 8px;
     margin: 0rem;
     padding:1.6rem;
-    width: 34.2rem;
+    width: 0rem auto
 }
 
 .blue {
@@ -146,7 +152,8 @@ figure img {
     grid-gap: 8px;
     margin: 0rem;
     padding:1.6rem;
-    width: 34.2rem;
+    /*width: 34.2rem;*/
+    width: 0rem, auto;
 }
 
 .blue blockquote {
@@ -163,6 +170,7 @@ grid-column: 1 / span 6;
     background-color: #33E1AC;
     color: #1C3368;
     display: grid;
+    width: 0rem auto;
 }
 
 .quoteCredit {
@@ -252,41 +260,45 @@ ul[title]::before {
     color: #E5E8F0;
 }
 /*HEADER MENU*/
-/*center logo icon*/
- /*hide text menu, show burger*/
-
-
-/*hide text menu for desktop*/
-.navigation {
-    display: flex;
-    justify-content: right;
-    width: 34rem; 
-    padding-right: 0rem;
-}
-.navigation div{
-    display: flex;
-    align-self: center;
-    justify-content: center;
-    width: 22rem;
-}
 nav {
-    overflow: hidden;
+    grid-column: 6 / span 6;
+    width: 100%;
 }
 
-nav a {
+nav #hamburger {
+    cursor: none;
     display: none;
-  }
+}
 
-
-/*display hamburger menu*/
-nav a.icon {
-    display: block;
-    padding: 1.6rem 1rem;
+nav label {
+    cursor: pointer;
     color: #E5E8F0;
-    align-self: center;
-    flex-shrink: 0;
-  }
+    font-style: normal;
+    font-size: 4.8rem;
+    float: right;
+    padding-bottom: 2rem;
+}
 
+nav ul li {
+    display: block;
+    padding-top: 1.2rem;
+}
+
+nav ul li a {
+    color: #E5E8F0;
+    text-decoration: none;
+}
+
+nav ul {
+    display: none;
+}
+
+nav input:checked ~ ul {
+    display: block;
+}
+  
+
+/*logo*/
 .logo-image {
     width: 28vw;
     flex-shrink: 0;
@@ -395,60 +407,67 @@ padding-bottom: 3.2rem;
 .side-side figcaption {
     width: 68vw;
     align-self: center;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     padding-bottom: 1.6rem;
 }
 
-/*table*/
-
-.tableWrap{
-    margin-top: 1.6rem;
-    margin-left:0rem;
-}
-.tg-wrap {
-    background-color: #1C3368;
+/*Blue White Border Table*/
+.tableH {
     color: #E5E8F0;
-    border-bottom: solid .1rem #E5E8F0;
-    margin: 0rem;
+    padding: 1.6rem;
 }
 
-.tg-wrap tr {   
-    padding: 0rem;
-    border: 0rem;
+.Rows-4cols {
+    display:flex;
+    flex-wrap: wrap;
+    padding: 0;
 }
-.tg-wrap td {
-    border: solid .1rem #E5E8F0;
-    font-size: 1rem;
-    font-weight: lighter;
-    letter-spacing: .05rem;
-    line-height: 1.2rem;
-    padding:.3rem;
-    vertical-align: center;
-}
-.table-title {
-    border: .1rem solid #1C3368;
+/*4row*/
+.cell {
+    border: solid .15rem #E5E8F0;
+    box-sizing: border-box;
+    flex-grow: 1;
+    list-style: none;
+    overflow: hidden; 
+    padding: 1rem 1rem;
+    width: 25%; 
+  }
+.cell-top {
     background-color: #E5E8F0;
+    border: .15rem solid #1C3368;
+    flex-grow: 1;
+    list-style: none;
+    overflow: hidden; 
+    padding: 1rem 1rem;
+    width: 25%; 
+}
+  .Rows-4cols h5 {
+    color: #E5E8F0;
+    font-size: 1.1rem;
+    font-style: normal;
+    line-height: 1.6rem;
+    padding-bottom: 1.6rem; 
+}
+
+.Rows-4cols .cell-top h5 {
     color: #1C3368;
-    text-align: left;
-    font-size: 1.6rem;
-    
- 
 }
 
-
-.table-title th {
-    border: .1rem solid #1C3368;
-    padding:.5rem;
-    border-right: 0rem;
-}
-
- .row-header {
-    background-color: #E5E8F0;
+.Rows-4cols .cell-box-color h5 {
     color: #1C3368;
-    text-align: center;
-    border: solid .2rem #1C3368;
-    padding-right: 0rem;
+    font-weight: 700;
+    letter-spacing: .1rem;
 }
+.cell-box-color {
+    background-color: #33E1AC;
+    border: .15rem solid #E5E8F0;
+    flex-grow: 1;
+    list-style: none;
+    overflow: hidden; 
+    padding: 1rem 1rem;
+    width: 25%; 
+}
+
 /*instead of div div just used br and targeted for spacing*/
 br {
     margin-bottom: 1.6rem;
@@ -544,33 +563,29 @@ figure img {
 
 /*adding flex to the images*/
 .stack{
-    display:flexbox;
+    display:flex;
     justify-content: start;
-    margin: 1rem;
+    margin: 0rem auto;
     padding-bottom: .8rem;
+    flex-shrink: 1;
     flex-wrap: wrap;
+    justify-content: center;
 }
+
 
 .stack img{
-    padding-left: .2rem;
-}
-.stack :first-child {
-    padding-left: 6rem;
-}
-.stack :nth-last-child(2) {
-    padding-left: .75rem;
-}
-.stack-last{
-    display:flexbox;
-    justify-content: start;
-    margin-left: 9rem;
-    padding-bottom: .8rem;
-    flex-wrap: wrap;
-}
-.stack-last :last-child {
-    margin-left: 2.3rem;
+    padding: .2rem;
 }
 
+.stack figcaption {
+    align-self: center;
+    color: #E5E8F0;
+    font-size: 1.2rem;
+    letter-spacing: .03rem;
+    padding-bottom: 1.6rem;
+    width: 68vw;
+
+}
 /*usability testing*/
 
 /* adding flex to the footer*/
@@ -592,9 +607,3 @@ figure img {
     padding: 0rem;
 }
 
-/*for responsive menu*/
-/*to use for desktopView
-.topBar nav li{
-    display: inline;
-    padding: 8px;
-} */
