@@ -14,10 +14,12 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 1.6rem;
     font-style: normal;
-    margin: 0;
-    width: 0rem auto;
+    margin: 0 auto;
 }
 
+.container{
+    max-width: 36rem;
+}
 /*section 6columns Grid for all*/
 section{
     background-color:#E5E8F0;
@@ -27,10 +29,10 @@ section{
     grid-gap: 8px;
     margin: 0rem;
     padding:1.6rem 1.6rem;
-    width: 0rem auto;
+    max-width: 36rem;
 }
 
-/*allowing elements to spread to right margin*/
+/*allowing elements to spread to right margin on Mobile*/
 section, header, .blue, h1, h2, h3, h4, h6, ul {
     grid-column: 1 / span 7;
 }
@@ -41,6 +43,7 @@ section, header, .blue, h1, h2, h3, h4, h6, ul {
     grid-column: 1 / span 6;
 }
 
+/*control over large center images*/
 .largeCenter {
     width: 75vw;
     align-content: center;
@@ -59,11 +62,13 @@ button {
     text-decoration: none;
   }
 
-
+/*link text color*/
 a {
     color: #FF28B1;
     text-decoration: none;
 }
+
+/*Font h1-h6 sizes*/
 h1{
     font-size: 3rem;
     font-weight: 700;
@@ -77,7 +82,7 @@ h1{
     line-height: 2rem;
     letter-spacing: .05rem;
     padding-top: 2.4rem;
-    }
+}
 h3 {
     font-size: 2rem;
     font-weight: bold;
@@ -98,7 +103,7 @@ h6 {
     font-size: 1rem;
 }
 
-
+/*font sizes for text, et all..*/
 blockquote {
     color: #FF28B1;
     font-style: italic;
@@ -121,6 +126,7 @@ p {
     grid-column: 1 / 7;
 }
 
+/*Figure images containers*/
 figure {
     font-size: 1.2rem;
     line-height: 1.6rem;
@@ -131,6 +137,7 @@ figure img {
     width: 2.3rem;
 }
 
+/*selections adjustments for backgrnd color*/
 .hero {
     background-color: #1C3368;
     color: #E5E8F0;
@@ -176,7 +183,7 @@ grid-column: 1 / span 6;
 .quoteCredit {
   font-size: 1.2rem;
 }
-
+/*ul li */
 
 ul{
  padding-bottom:1.6rem;
@@ -190,7 +197,8 @@ ul li {
     font-weight: 200;
     padding-left: 1.2rem;
 }
-/*NUM list*/
+
+/* ul li # list*/
 .blue ol{
     padding-bottom:1.6rem;
    }
@@ -205,7 +213,7 @@ ul li {
        
    }
 
-/*add title to the list*/
+/*add titles to the list*/
 ul[title]::before {
     content: attr(title);
     font-weight: 700;
@@ -259,7 +267,7 @@ ul[title]::before {
 .blue ul[title]::before {
     color: #E5E8F0;
 }
-/*HEADER MENU*/
+/*Navagation primary ->MENU*/
 nav {
     grid-column: 6 / span 6;
     width: 100%;
@@ -306,7 +314,7 @@ nav input:checked ~ ul {
 }
 
 
-/* HEADER HERO STATEMENT*/
+/*HEADER HERO STATEMENT special typefaces*/
 .hero h1{  
     /* mobile-mission=hero-statement */
     font-weight: bold;
@@ -332,7 +340,7 @@ padding-bottom: 3.2rem;
     grid-column: 4;
     padding-right: 6rem;
 }
-/*gallery home page section for casestudy*/
+/*home pg bottom-half section for casestudy*/
 
 .casestudy-link {
     width: 36rem;
@@ -343,7 +351,6 @@ padding-bottom: 3.2rem;
     margin: 0rem;
     }
 
-/*Adding blen-mode to images temp FIX-->for the meantime until, I clean up background in PS*/
 .casestudy-img {
     width: 24vw;
     margin-bottom: 1.6rem;
@@ -382,7 +389,7 @@ padding-bottom: 3.2rem;
     grid-column: 1 /span 6; 
     }
 
-/*User Flows*/
+/*User Flows imgs need to be bigger than most*/
 .widthClass div{
     grid-column: 1 /span 7;
 }
@@ -391,6 +398,7 @@ padding-bottom: 3.2rem;
     grid-column: 1 / span 7;
 }
 
+/*A/B testing images for side by side positioning*/
 .side-side{
     display: flex;
     flex-wrap: wrap;
@@ -475,7 +483,7 @@ br {
 
 /*Key Market Validation*/
 
-/*stat stles here*/
+/*stat styles here*/
 .statInfo {
     row-gap: 1.2rem;
     color: #E5E8F0;
@@ -561,7 +569,7 @@ figure img {
     width: 33rem;
 }
 
-/*adding flex to the images*/
+/*Sketches and Wireframes + User Testing -adding flex to the images*/
 .stack{
     display:flex;
     justify-content: start;
@@ -586,7 +594,6 @@ figure img {
     width: 68vw;
 
 }
-/*usability testing*/
 
 /* adding flex to the footer*/
 .btm-bar {
