@@ -14,12 +14,8 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 1.6rem;
     font-style: normal;
-    margin: 0 auto;
 }
 
-.container{
-    max-width: 36rem;
-}
 /*section 6columns Grid for all*/
 section{
     background-color:#E5E8F0;
@@ -29,7 +25,7 @@ section{
     grid-gap: 8px;
     margin: 0rem;
     padding:1.6rem 1.6rem;
-    max-width: 36rem;
+    width: 100%;
 }
 
 /*allowing elements to spread to right margin on Mobile*/
@@ -39,7 +35,7 @@ section, header, .blue, h1, h2, h3, h4, h6, ul {
 
 /*controling the size of the images viewer*/
 .image-fit {
-    width: 50vmin;
+    width: 60vmin;
     grid-column: 1 / span 6;
 }
 
@@ -147,7 +143,6 @@ figure img {
     grid-gap: 8px;
     margin: 0rem;
     padding:1.6rem;
-    width: 0rem auto
 }
 
 .blue {
@@ -155,12 +150,11 @@ figure img {
     color: #E5E8F0;
     display: grid;
     grid-auto-rows: auto;
-    grid-template-columns: repeat(6,1fr);
+    grid-column: repeat(6,1fr);
     grid-gap: 8px;
     margin: 0rem;
     padding:1.6rem;
-    /*width: 34.2rem;*/
-    width: 0rem, auto;
+    width: 100%;
 }
 
 .blue blockquote {
@@ -171,13 +165,14 @@ font-size: 1.8rem;
 line-height: 2.6rem;
 padding-bottom: 1.6rem;
 grid-column: 1 / span 6;
+width: 36rem;
 }
 
 .green {
     background-color: #33E1AC;
     color: #1C3368;
     display: grid;
-    width: 0rem auto;
+    width: 100%;
 }
 
 .quoteCredit {
@@ -341,10 +336,11 @@ padding-bottom: 3.2rem;
     padding-right: 6rem;
 }
 /*home pg bottom-half section for casestudy*/
-
 .casestudy-link {
-    width: 36rem;
+    background-color: #E5E8F0;
+    width: 100%;
 }
+
 .casestudy-link img {
     width: 60vw;
     padding: 1.6rem 0rem 1.6rem 0rem;
@@ -598,8 +594,9 @@ figure img {
 /* adding flex to the footer*/
 .btm-bar {
     display: flex;
-    height: 3.2rem;
-    justify-content: left;
+    height: 5vh;
+    width: 100%;
+    justify-content: space-evenly;
 }
 .btm-bar p{
     align-self: center;
@@ -610,7 +607,13 @@ figure img {
 }
 
 .btm-bar img{
-    width: 22vw;
-    padding: 0rem;
+    width: 80%;
 }
 
+/*responsive refractoring*/
+
+@media screen and (min-width: 477px) {
+ /*Begin change min-width*/
+
+
+}
