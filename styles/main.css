@@ -14,6 +14,7 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 1.6rem;
     font-style: normal;
+    margin: 0 auto;
 }
 
 /*section 6columns Grid for all*/
@@ -29,13 +30,13 @@ section{
 }
 
 /*allowing elements to spread to right margin on Mobile*/
-section, header, .blue, h1, h2, h3, h4, h6, ul {
+section, header, .blue, h1, h2, h3, h4, h6, ul, .blue p {
     grid-column: 1 / span 7;
 }
 
 /*controling the size of the images viewer*/
 .image-fit {
-    width: 60vmin;
+    width: 70vmin;
     grid-column: 1 / span 6;
 }
 
@@ -51,16 +52,19 @@ button {
     color:#E5E8F0;
     cursor: pointer;
     font-size: 1.6rem;
+    letter-spacing: .1rem;
     font-weight: 600;
     margin: 1.2rem 0rem 1.2rem 0rem;
     padding: .8rem;
+    border-radius: .4rem;
     text-align: center;
     text-decoration: none;
+    width: 50vw;
   }
 
 /*link text color*/
 a {
-    color: #FF28B1;
+    color: #33E1AC;
     text-decoration: none;
 }
 
@@ -130,7 +134,16 @@ figure {
     font-size: 1.1rem;
 }
 figure img {
-    width: 2.3rem;
+    width: 2.3vmin;
+}
+
+figcaption {
+    align-self: center;
+    color: #E5E8F0;
+    font-size: 1.2rem;
+    letter-spacing: .03rem;
+    padding: 1.6rem;
+    width: 68vw;
 }
 
 /*selections adjustments for backgrnd color*/
@@ -277,7 +290,7 @@ nav label {
     cursor: pointer;
     color: #E5E8F0;
     font-style: normal;
-    font-size: 4.8rem;
+    font-size: 6.4rem;
     float: right;
     padding-bottom: 2rem;
 }
@@ -303,7 +316,7 @@ nav input:checked ~ ul {
 
 /*logo*/
 .logo-image {
-    width: 28vw;
+    width: 20vw;
     flex-shrink: 0;
     align-self: center;
 }
@@ -400,19 +413,30 @@ padding-bottom: 3.2rem;
     flex-wrap: wrap;
     justify-content: center;
     margin-top: 0rem;
+    width: 100%;
+}
+
+.abL{
+ border: 1px solid pink;
+ width: 90%;
+ grid-row: 4;
+ float: left;
+ grid-column: 1 / span 3;
+ padding-left: 1.6rem;
+}
+
+.abR {
+    border: 1px solid pink;
+    width: 100%;
+    grid-row: 4;
+    grid-column: 4 /span 6;
+    float: right;
+    padding-left: 1.6rem;
 }
 
 .side-side img {
     width: 40vw;
     padding: 1rem .4rem;
-    align-self: center;
-}
-
-.side-side figcaption {
-    width: 68vw;
-    align-self: center;
-    font-size: 1.2rem;
-    padding-bottom: 1.6rem;
 }
 
 /*Blue White Border Table*/
@@ -576,19 +600,8 @@ figure img {
     justify-content: center;
 }
 
-
 .stack img{
     padding: .2rem;
-}
-
-.stack figcaption {
-    align-self: center;
-    color: #E5E8F0;
-    font-size: 1.2rem;
-    letter-spacing: .03rem;
-    padding-bottom: 1.6rem;
-    width: 68vw;
-
 }
 
 /* adding flex to the footer*/
@@ -596,14 +609,16 @@ figure img {
     display: flex;
     height: 5vh;
     width: 100%;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 .btm-bar p{
     align-self: center;
+    color: #33E1AC;
     line-height: 1.2rem;
     flex-shrink: 0;
     font-size: 1.2rem;
     padding: 0rem;
+
 }
 
 .btm-bar img{
