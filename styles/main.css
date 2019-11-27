@@ -13,8 +13,8 @@ body {
     color: #1C3368;
     font-family: 'Poppins', sans-serif;
     font-size: 1.6rem;
-    font-style: normal;
-    margin: 0 auto;
+    margin: 0, auto;
+    width: 100%;
 }
 
 /*section 6columns Grid for all*/
@@ -24,14 +24,13 @@ section{
     grid-auto-rows: auto;
     grid-template-columns: repeat(6,1fr);
     grid-gap: 8px;
-    margin: 0rem;
-    padding:1.6rem 1.6rem;
+    padding: 1.6rem;
     width: 100%;
 }
 
-/*allowing elements to spread to right margin on Mobile*/
-section, header, .blue, h1, h2, h3, h4, h6, ul, .blue p {
-    grid-column: 1 / span 7;
+/*allowing elements to spread to right margin*/
+header, figure, .blue, h1, h2, h3, h4, h6, ul, .blue p {
+    grid-column: 1 / span 6;
 }
 
 /*controling the size of the images viewer*/
@@ -43,7 +42,6 @@ section, header, .blue, h1, h2, h3, h4, h6, ul, .blue p {
 /*control over large center images*/
 .largeCenter {
     width: 75vw;
-    align-content: center;
 }
 /*button primary*/
 button {
@@ -74,7 +72,7 @@ h1{
     font-weight: 700;
     line-height: 3.2rem;
     letter-spacing: .05rem;
-    padding-bottom: 1rem;
+    padding-top: 2.4rem;
 }
  h2 {
     font-size: 2.4rem;
@@ -130,43 +128,41 @@ p {
 figure {
     font-size: 1.2rem;
     line-height: 1.6rem;
-    margin: 0;
     font-size: 1.1rem;
-}
-figure img {
-    width: 2.3vmin;
+    border: 2px solid green;
+    padding-bottom: 1.6rem;
 }
 
+
+
+
 figcaption {
-    align-self: center;
     color: #E5E8F0;
     font-size: 1.2rem;
     letter-spacing: .03rem;
-    padding: 1.6rem;
-    width: 68vw;
+    padding-top: .5rem;
+    padding-bottom: 1.8rem;
 }
 
+.blueType {
+    color: #1C3368;
+    font-size: 1.2rem;
+    letter-spacing: .03rem;
+    padding-top: .5rem;
+    padding-bottom: 1.8rem;
+}
 /*selections adjustments for backgrnd color*/
 .hero {
     background-color: #1C3368;
     color: #E5E8F0;
-    display: grid;
-    grid-auto-rows: auto;
-    grid-template-columns: repeat(6,1fr);
-    grid-gap: 8px;
-    margin: 0rem;
-    padding:1.6rem;
 }
 
+.flushBtm{
+    padding-bottom: 0rem;
+}
 .blue {
     background-color: #1C3368;
     color: #E5E8F0;
-    display: grid;
-    grid-auto-rows: auto;
-    grid-column: repeat(6,1fr);
-    grid-gap: 8px;
-    margin: 0rem;
-    padding:1.6rem;
     width: 100%;
 }
 
@@ -178,13 +174,11 @@ font-size: 1.8rem;
 line-height: 2.6rem;
 padding-bottom: 1.6rem;
 grid-column: 1 / span 6;
-width: 36rem;
 }
 
 .green {
     background-color: #33E1AC;
     color: #1C3368;
-    display: grid;
     width: 100%;
 }
 
@@ -227,7 +221,7 @@ ul[title]::before {
     font-weight: 700;
     font-size: 1.6rem;
     line-height: 2.4rem;
-    color: #121C2A;
+    color: #1C3368;
 }
 /*add bullets / checks to the list & diff colors*/
 
@@ -257,7 +251,9 @@ ul[title]::before {
 
 .green ul li{
     color: #1C3368;
+    line-height: 2.4rem;
 }
+
 
 .green ul[title]::before{
     color: #1C3368;
@@ -278,9 +274,11 @@ ul[title]::before {
 /*Navagation primary ->MENU*/
 nav {
     grid-column: 6 / span 6;
+
+}
+.logoTop {
     width: 100%;
 }
-
 nav #hamburger {
     cursor: none;
     display: none;
@@ -289,11 +287,13 @@ nav #hamburger {
 nav label {
     cursor: pointer;
     color: #E5E8F0;
-    font-style: normal;
-    font-size: 6.4rem;
     float: right;
-    padding-bottom: 2rem;
+    font-style: normal;
+    font-size: 400%;
+    border: 1px solid pink;
+    text-align: right;
 }
+
 
 nav ul li {
     display: block;
@@ -316,9 +316,9 @@ nav input:checked ~ ul {
 
 /*logo*/
 .logo-image {
-    width: 20vw;
-    flex-shrink: 0;
-    align-self: center;
+    width: 10vh;
+
+
 }
 
 
@@ -329,6 +329,7 @@ nav input:checked ~ ul {
     font-size: 2.4rem;
     line-height: 3.2rem;
     color:  #2DFFC0;
+    grid-column: 1 /span 6;
 }
 .hero h3 {
 color: #E5E8F0;
@@ -337,44 +338,18 @@ font-size: 2rem;
 line-height: 2.8rem;
 letter-spacing: .05rem;
 padding-bottom: 3.2rem;
+grid-column: 1 /span 6;
 }
 
 .hero p {
     text-align: center;
     padding-top: 3.2rem;
+    grid-column: 1 /span 6;
 }
 .hero img {
     background-color: #1C3368;
     grid-column: 4;
     padding-right: 6rem;
-}
-/*home pg bottom-half section for casestudy*/
-.casestudy-link {
-    background-color: #E5E8F0;
-    width: 100%;
-}
-
-.casestudy-link img {
-    width: 60vw;
-    padding: 1.6rem 0rem 1.6rem 0rem;
-    margin: 0rem;
-    }
-
-.casestudy-img {
-    width: 24vw;
-    margin-bottom: 1.6rem;
-    margin-left: 10rem;
-}
-
-.casestudy-link .side-img {
-    padding: 0rem;
-}
-
-.side-img {
-    border-radius: 4rem;
-    box-shadow: 1px 1px 15px rgba(29, 23, 23, .3);
-    padding: 0rem;
-    width: 40vw;
 }
 
 /*section case study overview*/
@@ -399,45 +374,24 @@ padding-bottom: 3.2rem;
     }
 
 /*User Flows imgs need to be bigger than most*/
-.widthClass div{
-    grid-column: 1 /span 7;
+.widthClass{
+    grid-template-columns: repeat(6,1fr);
+    grid-column: 1 / span 6;
 }
 .widthClass img {
     width: 80vw;
-    grid-column: 1 / span 7;
 }
 
-/*A/B testing images for side by side positioning*/
-.side-side{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 0rem;
-    width: 100%;
-}
-
-.abL{
- border: 1px solid pink;
- width: 90%;
- grid-row: 4;
- float: left;
- grid-column: 1 / span 3;
- padding-left: 1.6rem;
-}
-
-.abR {
-    border: 1px solid pink;
-    width: 100%;
-    grid-row: 4;
-    grid-column: 4 /span 6;
-    float: right;
-    padding-left: 1.6rem;
-}
 
 .side-side img {
-    width: 40vw;
-    padding: 1rem .4rem;
+    width: 45%;
+    padding: 0rem .4rem;
 }
+.side-side {
+    grid-column: 1 /span 6;
+    width:100%;
+}
+
 
 /*Blue White Border Table*/
 .tableH {
@@ -541,7 +495,6 @@ br {
 }
 .green-list li{
     color: #1C3368;
-    font-style: initial;
 }
 .action-list {
     grid-column: 1 / 6;
@@ -550,6 +503,7 @@ br {
 
 .action-list li {
     color: #E5E8F0;
+    line-height: 2.4rem;
 }
 .action-list ::before {
     content: "\271A";
@@ -557,9 +511,7 @@ br {
 }
 
 /*personas*/
-.persona{
-    display: grid;
-}
+
 .block-name {
     background-color: #1C3368;
     color: #E5E8F0;
@@ -574,35 +526,15 @@ br {
     grid-column: 1 / span 6;
 }
 
-/*wireframe summary figure*/
-figure {
-    grid-column: 1 / span 6;
-}
-figure img {
-    width: 16rem;
-}
-
 .next-row {
     width: 100%;
 }
 .large-img-settings img{
-    width: 33rem;
+    width: 40%;
 }
 
 /*Sketches and Wireframes + User Testing -adding flex to the images*/
-.stack{
-    display:flex;
-    justify-content: start;
-    margin: 0rem auto;
-    padding-bottom: .8rem;
-    flex-shrink: 1;
-    flex-wrap: wrap;
-    justify-content: center;
-}
 
-.stack img{
-    padding: .2rem;
-}
 
 /* adding flex to the footer*/
 .btm-bar {
@@ -610,6 +542,8 @@ figure img {
     height: 5vh;
     width: 100%;
     justify-content: space-between;
+    margin-top: 0rem;
+    padding:1.6rem;
 }
 .btm-bar p{
     align-self: center;
@@ -625,10 +559,79 @@ figure img {
     width: 80%;
 }
 
-/*responsive refractoring*/
+/* responsive refractoring */
 
-@media screen and (min-width: 477px) {
- /*Begin change min-width*/
-
-
+/* tablet portrait & landscape */
+@media only screen and (min-device-width : 700px) {
+html {
+    font-size: 12px;
 }
+section {
+    padding-left: 4rem;
+}
+.flushBtm img {
+    grid-column: 1 / span 6;
+}
+
+.image-fit, .persona .image-fit {
+    width:50vw;
+    grid-column: 4;
+}
+
+.widthClass{
+    width: 80%;
+}
+.widthClass img {
+    width: 80%;
+}
+.side-side {
+    width: 60%;
+}
+/* Styles */ }
+
+/* Desktops and laptops ----------- */
+
+@media only screen
+
+and (min-width : 1024px) {
+html {
+        font-size: 14px;
+    }
+section {
+    grid-template-columns: repeat(12,1fr);
+    padding-left: 0rem;
+}
+
+
+header, figure, h1, h2, h3, h4, h5, h6, ul, .blue p, p, .blue h2, blockquote, .blue blockquote, ul, .action-list, .block-name {
+    grid-column: 3 / span 8;
+}
+
+.image-fit, .persona .image-fit {
+ width: 30vw;
+ grid-column: 4 / span 10;
+}
+
+.widthClass{
+    grid-column: 3 / span 12;
+}
+.widthClass img {
+    width: 100%;
+}
+.side-side {
+    grid-column: 3 / 12;
+    width: 100%;
+ 
+}
+.side-side img {
+    width: 40%;
+}
+/* Styles */ }
+
+
+/*ipads
+@media only screen
+and (min-device-width : 768px)
+
+and (max-device-width : 1024px) {
+ (portrait and landscape*/
