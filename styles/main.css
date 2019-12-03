@@ -4,7 +4,7 @@
 
 *{box-sizing: border-box;}
 
-html{ 
+html { 
     font-size: 10px;
 }
 
@@ -25,7 +25,7 @@ section{
     grid-template-columns: repeat(6,1fr);
     grid-gap: 8px;
     padding: 1.6rem;
-    width: 100%;
+    max-width: 100%;
 }
 
 /*allowing elements to spread to right margin*/
@@ -152,18 +152,21 @@ figcaption {
     padding-bottom: 1.8rem;
 }
 /*selections adjustments for backgrnd color*/
+
 .hero {
     background-color: #1C3368;
     color: #E5E8F0;
+    max-width: 100%;
 }
 
 .flushBtm{
     padding-bottom: 0rem;
+    max-width: 100%;
 }
 .blue {
     background-color: #1C3368;
     color: #E5E8F0;
-    width: 100%;
+    max-width: 100%;
 }
 
 .blue blockquote {
@@ -179,7 +182,7 @@ grid-column: 1 / span 6;
 .green {
     background-color: #33E1AC;
     color: #1C3368;
-    width: 100%;
+    max-width: 100%;
 }
 
 .quoteCredit {
@@ -271,14 +274,20 @@ ul[title]::before {
 .blue ul[title]::before {
     color: #E5E8F0;
 }
-/*Navagation primary ->MENU*/
-nav {
-    grid-column: 6 / span 6;
 
+.top-wrap {
+    border: 2px solid yellowgreen;
+    grid-column: 1 / span 5;
+    max-width: 100%;
 }
-.logoTop {
-    width: 100%;
+
+.top-wrap img{
+    width: 20vw;
 }
+nav{
+    border: red solid 2px;
+}
+
 nav #hamburger {
     cursor: none;
     display: none;
@@ -287,13 +296,9 @@ nav #hamburger {
 nav label {
     cursor: pointer;
     color: #E5E8F0;
-    float: right;
     font-style: normal;
     font-size: 400%;
-    border: 1px solid pink;
-    text-align: right;
 }
-
 
 nav ul li {
     display: block;
@@ -312,14 +317,7 @@ nav ul {
 nav input:checked ~ ul {
     display: block;
 }
-  
 
-/*logo*/
-.logo-image {
-    width: 10vh;
-
-
-}
 
 
 /*HEADER HERO STATEMENT special typefaces*/
@@ -602,9 +600,14 @@ section {
     padding-left: 0rem;
 }
 
-
-header, figure, h1, h2, h3, h4, h5, h6, ul, .blue p, p, .blue h2, blockquote, .blue blockquote, ul, .action-list, .block-name {
+header, figure, h1, h2, h3, h4, h5, h6, ul, .hero h3, .top-wrap, .hero h1, .hero p, .blue p, p, .blue h2, blockquote, .blue blockquote, ul, .action-list, .block-name {
     grid-column: 3 / span 8;
+    max-width: 100%;
+}
+
+.hero img{
+    grid-row: 4;
+    grid-column: 7;
 }
 
 .image-fit, .persona .image-fit {
