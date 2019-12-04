@@ -133,9 +133,6 @@ figure {
     padding-bottom: 1.6rem;
 }
 
-
-
-
 figcaption {
     color: #E5E8F0;
     font-size: 1.2rem;
@@ -275,17 +272,25 @@ ul[title]::before {
     color: #E5E8F0;
 }
 
-.top-wrap {
-    border: 2px solid yellowgreen;
-    grid-column: 1 / span 5;
+.navwrap{
+    border: 1px solid yellowgreen;
+    display: inline-flex;
+    grid-column: 1 /  span 8;
     max-width: 100%;
+
+}
+.top-wrap {
+    border: 2px solid peru;
+    width: 80%;
 }
 
 .top-wrap img{
-    width: 20vw;
+    max-width: 15vw;
 }
+
 nav{
     border: red solid 2px;
+    width: 20%;
 }
 
 nav #hamburger {
@@ -600,7 +605,7 @@ section {
     padding-left: 0rem;
 }
 
-header, figure, h1, h2, h3, h4, h5, h6, ul, .hero h3, .top-wrap, .hero h1, .hero p, .blue p, p, .blue h2, blockquote, .blue blockquote, ul, .action-list, .block-name {
+header, figure, h1, h2, h3, h4, h5, h6, ul, .hero h3, .navwrap, .hero h1, .hero p, .blue p, p, .blue h2, blockquote, .blue blockquote, ul, .action-list, .block-name {
     grid-column: 3 / span 8;
     max-width: 100%;
 }
@@ -630,11 +635,3 @@ header, figure, h1, h2, h3, h4, h5, h6, ul, .hero h3, .top-wrap, .hero h1, .hero
     width: 40%;
 }
 /* Styles */ }
-
-
-/*ipads
-@media only screen
-and (min-device-width : 768px)
-
-and (max-device-width : 1024px) {
- (portrait and landscape*/
