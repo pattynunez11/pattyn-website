@@ -28,7 +28,7 @@ section{
     max-width: 100%;
 }
 /*allowing elements to spread to right margin*/
-header, figure, .blue, h1, h2, h3, h4, h6, ul, .blue p {
+header, figure, .blue, h1, h2, h3, h4, h6, ul, .blue p, .hero {
     grid-column: 1 / span 6;
 }
 
@@ -58,7 +58,13 @@ button {
     text-decoration: none;
     width: 50vw;
   }
-
+.hero button {
+        background-color:#E5E8F0;
+        color: #1C3368;
+      }
+  button a {
+      color: #E5E8F0;
+  }
 /*link text color*/
 a {
     color: #33E1AC;
@@ -309,6 +315,10 @@ nav ul li a {
     text-decoration: none;
 }
 
+.active {
+    border-bottom:1px solid #33E1AC;
+}
+
 nav ul {
     display: none;
     position: absolute;
@@ -345,9 +355,8 @@ grid-column: 1 /span 6;
 }
 
 .hero p {
+    grid-column: 1 / span 6;
     text-align: center;
-    padding-top: 3.2rem;
-    grid-column: 1 /span 6;
 }
 .hero img {
     background-color: #1C3368;
@@ -536,7 +545,25 @@ br {
     width: 40%;
 }
 
-/*Sketches and Wireframes + User Testing -adding flex to the images*/
+/*about page*/
+.about{
+    background-color: #1C3368;
+    padding-top: 10rem;
+    color: #E5E8F0;
+}
+
+.about p{
+    color: #E5E8F0;
+}
+
+.about h1{  
+    /* mobile-mission=hero-statement */
+    font-weight: bold;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    color:  #33E1AC;
+    grid-column: 1 /span 6;
+}
 
 
 /* adding flex to the footer*/
@@ -596,9 +623,14 @@ nav ul {
     padding-bottom: 0rem;
 }
 
+button {
+    max-width: 70%;
+    grid-column: 1;
+  }
+
 /*homepage image*/
 .flushBtm img {
-    grid-column: 1 / span 6;
+    grid-column: 1;
 }
 
 .image-fit, .persona .image-fit {
@@ -630,7 +662,7 @@ section {
     padding-left: 0rem;
 }
 
-header, figure, h1, h2, h3, h4, h5, h6, ul, .hero h3, .navwrap, .hero h1, .hero p, .blue p, p, .blue h2, blockquote, .blue blockquote, ul, .action-list, .block-name {
+header, figure, h1, h2, h3, h4, h5, h6, ul, .hero h3, .navwrap, .hero h1, .hero p, .blue p, p, .blue h2, blockquote, .blue blockquote, ul, .action-list, .block-name, .flushBtm img {
     grid-column: 3 / span 8;
     max-width: 100%;
 }
@@ -657,6 +689,9 @@ nav{
  grid-column: 4 / span 10;
 }
 
+.flushBtm .image-fit img {
+    grid-column: 7;
+}
 .widthClass{
     grid-column: 3 / span 12;
 }
