@@ -284,7 +284,7 @@ ul[title]::before {
 
 nav{
     grid-column: 7;
-    align-self: center;
+    align-self: center;    
 }
 
 nav #hamburger {
@@ -301,6 +301,7 @@ nav label {
 
 nav ul li {
     display: block;
+    position: relative;
 }
 
 nav ul li a {
@@ -310,6 +311,9 @@ nav ul li a {
 
 nav ul {
     display: none;
+    position: absolute;
+    background:rgba(19, 83, 194, 0.5);
+    border-radius: .5rem;
 }
 
 nav input:checked ~ ul {
@@ -568,6 +572,31 @@ html {
 section {
     padding-left: 4rem;
 }
+
+/*menu*/
+.top-wrap img{
+    max-width: 10vw;
+   }
+nav{
+    grid-column: 5 / span 8;
+}
+/*burger*/
+nav label {
+    display:none;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul {
+    background:none;
+    display: inline-flex;
+    justify-content: space-evenly;
+    padding-bottom: 0rem;
+}
+
+/*homepage image*/
 .flushBtm img {
     grid-column: 1 / span 6;
 }
@@ -604,6 +633,18 @@ section {
 header, figure, h1, h2, h3, h4, h5, h6, ul, .hero h3, .navwrap, .hero h1, .hero p, .blue p, p, .blue h2, blockquote, .blue blockquote, ul, .action-list, .block-name {
     grid-column: 3 / span 8;
     max-width: 100%;
+}
+.top-wrap{
+    grid-column: 2;
+    width: 100%;
+}
+
+.top-wrap img{
+    max-width: 8vw;
+   }
+
+nav{
+    grid-column: 8;
 }
 
 .hero img{
