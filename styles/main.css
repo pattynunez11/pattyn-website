@@ -27,7 +27,6 @@ section{
     padding: 1.6rem;
     max-width: 100%;
 }
-
 /*allowing elements to spread to right margin*/
 header, figure, .blue, h1, h2, h3, h4, h6, ul, .blue p {
     grid-column: 1 / span 6;
@@ -72,7 +71,7 @@ h1{
     font-weight: 700;
     line-height: 3.2rem;
     letter-spacing: .05rem;
-    padding-top: 2.4rem;
+    padding-top: 3.2rem;
 }
  h2 {
     font-size: 2.4rem;
@@ -129,7 +128,6 @@ figure {
     font-size: 1.2rem;
     line-height: 1.6rem;
     font-size: 1.1rem;
-    border: 2px solid green;
     padding-bottom: 1.6rem;
 }
 
@@ -273,24 +271,20 @@ ul[title]::before {
 }
 
 .navwrap{
-    border: 1px solid yellowgreen;
+    background-color: #1C3368;
     display: inline-flex;
-    grid-column: 1 /  span 8;
-    max-width: 100%;
-
-}
-.top-wrap {
-    border: 2px solid peru;
-    width: 80%;
+    width: 100%;
+    position: fixed;
+    border-bottom: .001rem solid rgba(51, 225, 172, .3);
 }
 
 .top-wrap img{
-    max-width: 15vw;
+ max-width: 15vh;
 }
 
 nav{
-    border: red solid 2px;
-    width: 20%;
+    grid-column: 7;
+    align-self: center;
 }
 
 nav #hamburger {
@@ -307,7 +301,6 @@ nav label {
 
 nav ul li {
     display: block;
-    padding-top: 1.2rem;
 }
 
 nav ul li a {
@@ -326,12 +319,15 @@ nav input:checked ~ ul {
 
 
 /*HEADER HERO STATEMENT special typefaces*/
+.hero {
+    padding-top: 10rem;
+}
 .hero h1{  
     /* mobile-mission=hero-statement */
     font-weight: bold;
     font-size: 2.4rem;
     line-height: 3.2rem;
-    color:  #2DFFC0;
+    color:  #33E1AC;
     grid-column: 1 /span 6;
 }
 .hero h3 {
