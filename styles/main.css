@@ -463,9 +463,7 @@ grid-column: 1 /span 6;
 }
 
 /*instead of div div just used br and targeted for spacing*/
-br {
-    margin-bottom: 1.6rem;
-}
+
 
 /*Key Market Validation*/
 
