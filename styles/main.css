@@ -1,5 +1,5 @@
 @charset "utf-8";
-
+@import url('https://fonts.googleapis.com/css?family=Poppins:400|Poppins:400');
 /*add standard style to use for document*/
 
 *{box-sizing: border-box;}
@@ -12,7 +12,8 @@ body {
     background-color: #1C3368;
     color: #1C3368;
     font-family: 'Poppins', sans-serif;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
     margin: 0, auto;
     width: 100%;
 }
@@ -73,24 +74,31 @@ a {
 
 /*Font h1-h6 sizes*/
 h1{
-    font-size: 3rem;
+    font-size: 2.8rem;
     font-weight: 700;
-    line-height: 3.2rem;
+    line-height: 2rem;
+    letter-spacing: .05rem;
+    padding-top: 3.2rem;
+}
+.blue h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    line-height: 2rem;
     letter-spacing: .05rem;
     padding-top: 3.2rem;
 }
  h2 {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     font-weight: 700;
     line-height: 2rem;
     letter-spacing: .05rem;
     padding-top: 2.4rem;
 }
 h3 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: bold;
     letter-spacing: .02rem;
-    line-height: 2.4rem;   
+    line-height: 2rem;   
 }
 h4 {
     font-size: 1.8rem;
@@ -110,22 +118,27 @@ h6 {
 blockquote {
     color: #FF28B1;
     font-style: italic;
-    font-weight: 500;
     font-size: 1.8rem;
-    line-height: 2.6rem;
-    padding-bottom: 1.6rem;
+    line-height: 2.4rem;
+    padding: 0rem 0rem 0rem .9rem;
     grid-column: 1 / span 6;
     }
 
-.xsmall-text {
-    font-size: .8rem;
-    padding:0rem;
-}
+    .blue blockquote {
+        color: #FF28B1;
+        font-style: italic;
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+        grid-column: 1 / span 6;
+        
+        }
 
+.xsmall-text {
+    font-size: .9rem;
+    padding: 0rem 0rem 0rem .9rem;
+}
 p {
-    line-height: 2rem;
-    padding-bottom: 1.6rem;
-    padding-right: 1rem;
+    padding-bottom: 1.2rem;
     grid-column: 1 / 7;
 }
 
@@ -170,15 +183,6 @@ figcaption {
     max-width: 100%;
 }
 
-.blue blockquote {
-color: #FF28B1;
-font-style: italic;
-font-weight: 500;
-font-size: 1.8rem;
-line-height: 2.6rem;
-padding-bottom: 1.6rem;
-grid-column: 1 / span 6;
-}
 
 .green {
     background-color: #33E1AC;
@@ -196,12 +200,10 @@ ul{
  padding-right: 1rem;
 }
 
-ul li {
+li {
     color: #1C3368;
-    font-size: 1.4rem;
-    line-height: 2rem;
-    font-weight: 200;
-    padding-left: 1.2rem;
+    font-size: 1.15rem;
+    line-height: 3rem;
 }
 
 /* ul li # list*/
@@ -255,7 +257,7 @@ ul[title]::before {
 
 .green ul li{
     color: #1C3368;
-    line-height: 2.4rem;
+
 }
 
 
@@ -336,6 +338,8 @@ nav input:checked ~ ul {
 .hero {
     padding-top: 10rem;
 }
+
+/*padding for the top section, to be viewed under fixed menu*/
 .hero h1{  
     /* mobile-mission=hero-statement */
     font-weight: bold;
@@ -344,6 +348,12 @@ nav input:checked ~ ul {
     color:  #33E1AC;
     grid-column: 1 /span 6;
 }
+
+.top-section {
+    padding-top: 10rem;
+    background-color: #1C3368;
+}
+
 .hero h3 {
 color: #E5E8F0;
 font-weight: regular;
@@ -437,8 +447,7 @@ grid-column: 1 /span 6;
 }
   .Rows-4cols h5 {
     color: #E5E8F0;
-    font-size: 1.1rem;
-    font-style: normal;
+    font-size: 1.2rem;
     line-height: 1.6rem;
     padding-bottom: 1.6rem; 
 }
@@ -507,13 +516,14 @@ grid-column: 1 /span 6;
     color: #1C3368;
 }
 .action-list {
-    grid-column: 1 / 6;
+    grid-column: 1 / 7;
 }
 
 
 .action-list li {
     color: #E5E8F0;
-    line-height: 2.4rem;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
 }
 .action-list ::before {
     content: "\271A";
