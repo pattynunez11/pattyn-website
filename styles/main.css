@@ -14,8 +14,6 @@ body {
     font-family: 'Poppins', sans-serif;
     font-size: 1.4rem;
     line-height: 1.6rem;
-    margin: 0, auto;
-    width: 100%;
 }
 
 /*section 6columns Grid for all*/
@@ -180,7 +178,6 @@ figcaption {
 .blue {
     background-color: #1C3368;
     color: #E5E8F0;
-    max-width: 100%;
 }
 
 
@@ -284,15 +281,24 @@ ul[title]::before {
     width: 100%;
     position: fixed;
     border-bottom: .001rem solid rgba(51, 225, 172, .3);
+    height: 7.2rem;
 }
 
-.top-wrap img{
- max-width: 15vh;
+.top-wrap{
+    width: 80%;
+    height: 6.2rem;
+    padding-left: 1.6rem;
+    padding-top: 1rem;
+}
+.top-wrap img {
+ height: 100%;
+ align-self: center;
 }
 
 nav{
-    grid-column: 7;
-    align-self: center;    
+    align-self: center; 
+    height: 6.2rem;
+    padding-top: 1.6rem;
 }
 
 nav #hamburger {
@@ -325,7 +331,8 @@ nav ul {
     display: none;
     position: absolute;
     background:rgba(19, 83, 194, 0.5);
-    border-radius: .5rem;
+    border-radius: .1rem;
+    padding: 1rem;
 }
 
 nav input:checked ~ ul {
@@ -351,7 +358,9 @@ nav input:checked ~ ul {
 
 .top-section {
     padding-top: 10rem;
-    background-color: #1C3368;
+}
+.top-section p {
+    padding-bottom: 0rem;
 }
 
 .hero h3 {
@@ -425,6 +434,7 @@ grid-column: 1 /span 6;
     display:flex;
     flex-wrap: wrap;
     padding: 0;
+    margin: 0 1.6rem 0 1.6rem;
 }
 /*4row*/
 .cell {
@@ -447,8 +457,8 @@ grid-column: 1 /span 6;
 }
   .Rows-4cols h5 {
     color: #E5E8F0;
-    font-size: 1.2rem;
-    line-height: 1.6rem;
+    font-size: 1.1rem;
+    line-height: 1.3rem;
     padding-bottom: 1.6rem; 
 }
 
@@ -575,27 +585,25 @@ grid-column: 1 /span 6;
 
 
 /* adding flex to the footer*/
+
+footer{
+    height: 3.2rem;
+}
 .btm-bar {
     display: flex;
-    height: 5vh;
-    width: 100%;
     justify-content: space-between;
-    margin-top: 0rem;
-    padding:1.6rem;
+    max-width: 100%;
 }
 .btm-bar p{
-    align-self: center;
     color: #33E1AC;
-    line-height: 1.2rem;
-    flex-shrink: 0;
-    font-size: 1.2rem;
-    padding: 0rem;
-
+    font-size: 1.0rem;
+    padding: 0 1rem 0 1rem;
 }
 
 .btm-bar img{
-    width: 80%;
+    width: 60%;
 }
+
 
 /* responsive refractoring */
 
