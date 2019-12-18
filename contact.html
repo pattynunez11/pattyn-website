@@ -15,34 +15,28 @@
     </head>
 
     <body> 
-      <!--logo-->
-      <div class="navwrap">  
-          <div class="top-wrap">
-           <a href="index.html"><img src="images/pnbluebetty.svg"
-               alt="Patty Nunez Logo PN disc" /> </a>
-         </div> 
-         <!--navigation-->
-              <nav>  
-                 <label for="hamburger">&#9776;</label>
-                 <input type="checkbox" id="hamburger"/>
-                 <ul> 
-                     <li>
-                         <a class="active" href="index.html">Projects</a>
-                     </li>
-                     <li>
-                         <a href="about.html">About</a>
-                     </li>
-                     <li>
-                         <a href="contact.html">Contact</a>
-                     </li>
-                 </ul>
-
-            </nav></div>
-      </div>
+                     <!--logo-->
+                     <div class="navwrap">  
+                      <div class="top-wrap">
+                       <a href="index.html"><img src="images/pnbluebetty.svg"
+                           alt="Patty Nunez Logo PN disc" /> </a>
+                     </div> 
+                     <!--navigation-->
+                          <nav id="navpanel"
+                          class="menupanel">           
+                          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+   
+     <a href="index.html" class="active">Projects</a>
+     <a href="about.html">About</a>
+     <a href="contact.html">Contact</a>
+           
+                        </nav>
+                       <!--thetastybuger-->
+   <button class="openbtn" onclick="openNav()">&#9776; </button>
+                       </div>
       <section class="blue top-section">
-        <p class="top-section">Hello, here is my email.</p>
-         <a
-              href="mailto:pattyndesign@gmail.com">pattyndesign@gmail.com</a>
+        <p>Hello, here is my email.</p>
+         <a href="mailto:pattyndesign@gmail.com">pattyndesign@gmail.com</a>
             
               <p> Have a look at my skills, work history, and education.
               </p>
@@ -58,20 +52,22 @@
               <p>Take a sneak peek at snipets of my wanderings & la vida. </p>
               <a href="https://www.instagram.com/pattynunez11/"> @pattynunez11</a>
       </section>
-      <!--footer-->
-      <footer class="btm-bar">
+       <!--footer-->
+       <footer class="blue btm-bar">
         <p>&copy; Patty Nunez</p>
-        <p> <a href="mailto:pattyndesign@gmail.com">pattyndesign@gmail.com </a>
+        <p> <a href="mailto:pattyndesign@gmail.com">pattyndesign@gmail.com
+            </a>
         </p>
         <p>
-          <a href="https://twitter.com/patricianunez" target="_blank"><img
-              src="images/twitter.svg" alt="twitter account"></a>
+                <img src="images/twitter.svg" />
         </p>
         <p>
-          <a href="https://www.linkedin.com/in/pattynunez/" target="_blank"
-            alt="linkedin account"> <img src="images/linkedin.svg" /> </a>
+                <img src="images/linkedin.svg" />
         </p>
-      </footer>
-      <!--END HOME PAGE-->
-    </body>
+    </footer>
+
+
+            <!--END HOME PAGE-->
+      </body>
+
   </html>

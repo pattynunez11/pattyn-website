@@ -6,12 +6,14 @@
 
 html { 
     font-size: 10px;
+    max-height: 100%;
 }
 
 body {
     background-color: #1C3368;
     color: #1C3368;
     font-family: 'Poppins', sans-serif;
+    font-weight: lighter;
     font-size: 1.4rem;
     line-height: 1.6rem;
 }
@@ -22,24 +24,30 @@ section{
     display: grid;
     grid-auto-rows: auto;
     grid-template-columns: repeat(6,1fr);
-    grid-gap: 8px;
+    grid-gap: .8rem;
     padding: 1.6rem;
     max-width: 100%;
 }
+
 /*allowing elements to spread to right margin*/
-header, figure, .blue, h1, h2, h3, h4, h6, ul, .blue p, .hero {
+header, figure, .blue, h1, h2, h3, h4, h6, ul, .blue p, .hero, .flushBtm, .flushBtm h3, .flushBtm h4, .flushBtm ul{
     grid-column: 1 / span 6;
 }
+
 
 /*controling the size of the images viewer*/
 .image-fit {
-    width: 70vmin;
+    width: 70vw;
     grid-column: 1 / span 6;
 }
 
+.side-side .image-fit-2{
+    width: 60vw;
+    padding-top: 1rem;
+}
 /*control over large center images*/
-.largeCenter {
-    width: 75vw;
+.largeCenter{
+    width: 100%;
 }
 /*button primary*/
 button {
@@ -108,10 +116,6 @@ h5 {
     line-height: 1.6rem;
 }
 
-h6 {
-    font-size: 1rem;
-}
-
 /*font sizes for text, et all..*/
 blockquote {
     color: #FF28B1;
@@ -172,9 +176,10 @@ figcaption {
 }
 
 .flushBtm{
-    padding-bottom: 0rem;
+    padding: 1.6rem 1.6rem 0rem 1.6rem;
     max-width: 100%;
 }
+
 .blue {
     background-color: #1C3368;
     color: #E5E8F0;
@@ -285,7 +290,7 @@ ul[title]::before {
 }
 
 .top-wrap{
-    width: 80%;
+    width: 50%;
     height: 6.2rem;
     padding-left: 1.6rem;
     padding-top: 1rem;
@@ -295,50 +300,62 @@ ul[title]::before {
  align-self: center;
 }
 
-nav{
-    align-self: center; 
-    height: 6.2rem;
-    padding-top: 1.6rem;
-}
 
-nav #hamburger {
-    cursor: none;
-    display: none;
-}
 
-nav label {
-    cursor: pointer;
-    color: #E5E8F0;
-    font-style: normal;
-    font-size: 400%;
-}
+/* The----------------menu */
+.menupanel {
+    height: 25rem; /* Specify a height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed;  /*->removed to change position to burger-- Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    right: 0;
+    background-color: #1C3368;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 6rem; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
 
-nav ul li {
-    display: block;
-    position: relative;
-}
-
-nav ul li a {
-    color: #E5E8F0;
+  }
+  
+  /* links */
+  .menupanel a {
+    padding: 1.8rem .8rem 1.8rem 1.8rem;
     text-decoration: none;
-}
-
-.active {
-    border-bottom:1px solid #33E1AC;
-}
-
-nav ul {
-    display: none;
-    position: absolute;
-    background:rgba(19, 83, 194, 0.5);
-    border-radius: .1rem;
-    padding: 1rem;
-}
-
-nav input:checked ~ ul {
+    font-size: 2.4rem;
+    color: #818181;
     display: block;
+    transition: 0.3s;
+  }
+  
+  /* hover change their color */
+  .menupanel a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .menupanel .closebtn {
+    position: absolute;
+    top: 1.8rem;
+    left: 4.5rem;
+    font-size: 3.6rem;
+  }
+  
+  /* Style the button that is used to open the menu panel */
+  .openbtn {
+    font-size: 2.8rem;
+    cursor: pointer;
+    background-color: #1C3368;
+    color: white;
+    padding: 1rem 1.5rem;
+    border: none;
+  }
+  
+  .openbtn:hover {
+    background-color: #1C3368;
+  }
+.contact{
+    overflow: hidden
 }
-
 
 
 /*HEADER HERO STATEMENT special typefaces*/
@@ -374,13 +391,8 @@ grid-column: 1 /span 6;
 }
 
 .hero p {
-    grid-column: 1 / span 6;
+    margin: 0 auto;
     text-align: center;
-}
-.hero img {
-    background-color: #1C3368;
-    grid-column: 4;
-    padding-right: 6rem;
 }
 
 /*section case study overview*/
@@ -433,14 +445,13 @@ grid-column: 1 /span 6;
 .Rows-4cols {
     display:flex;
     flex-wrap: wrap;
-    padding: 0;
+    padding: 0 0 1.6rem 0;
     margin: 0 1.6rem 0 1.6rem;
 }
 /*4row*/
 .cell {
     border: solid .15rem #E5E8F0;
     box-sizing: border-box;
-    flex-grow: 1;
     list-style: none;
     overflow: hidden; 
     padding: 1rem 1rem;
@@ -474,7 +485,6 @@ grid-column: 1 /span 6;
 .cell-box-color {
     background-color: #33E1AC;
     border: .15rem solid #E5E8F0;
-    flex-grow: 1;
     list-style: none;
     overflow: hidden; 
     padding: 1rem 1rem;
@@ -529,7 +539,6 @@ grid-column: 1 /span 6;
     grid-column: 1 / 7;
 }
 
-
 .action-list li {
     color: #E5E8F0;
     font-size: 1.2rem;
@@ -546,14 +555,14 @@ grid-column: 1 /span 6;
     background-color: #1C3368;
     color: #E5E8F0;
     padding: 1.6rem 0rem 0rem 1.2rem;
-    width: 40vw;
-    grid-column: 1 / span 6;
-    vertical-align: center;
+    grid-column: 1 / span 4;
 }
 
 .persona img {
     border-bottom:.2rem solid #FF28B1;
     grid-column: 1 / span 6;
+    width: 50vw;
+    margin: 0 auto;
 }
 
 .next-row {
@@ -583,61 +592,62 @@ grid-column: 1 /span 6;
     grid-column: 1 /span 6;
 }
 
-
-/* adding flex to the footer*/
-
-footer{
-    height: 3.2rem;
+.side-side.lastImg img{
+    border: 2 solid red;
 }
+    
+ /* adding flex to the footer*/
+
+ 
 .btm-bar {
     display: flex;
     justify-content: space-between;
-    max-width: 100%;
+    max-width: 90%;
+    margin: 0 auto;
 }
 .btm-bar p{
     color: #33E1AC;
     font-size: 1.0rem;
-    padding: 0 1rem 0 1rem;
+    padding-top: .7rem;
+
 }
 
 .btm-bar img{
     width: 60%;
 }
 
+/*--------------------------------- RESPONSIVE REFRACTORING----------------- */
 
-/* responsive refractoring */
-
-/* tablet portrait & landscape */
+/* -------------------------------TABLET PORTRAIT*/
 @media only screen and (min-device-width : 700px) {
 html {
     font-size: 12px;
 }
+
 section {
-    padding-left: 4rem;
+    padding: 1.2rem 2.4rem;
+    max-width: 100%;
 }
 
-/*menu*/
-.top-wrap img{
-    max-width: 10vw;
-   }
-nav{
-    grid-column: 5 / span 8;
+.top-section p{
+    grid-column: 1 /span 6;
+}
+
+.top-section a{
+    grid-column: 2 /span 6;
+    padding-bottom: 2.4rem;
 }
 /*burger*/
-nav label {
-    display:none;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul {
-    background:none;
-    display: inline-flex;
-    justify-content: space-evenly;
-    padding-bottom: 0rem;
-}
+/* Position and style the close button (top right corner) */
+.menupanel .closebtn {
+    font-size: 3.6rem;
+  }
+  
+  /* Style the button that is used to open the menu panel */
+  .openbtn {
+    font-size: 3.6rem;
+    padding: 10px 15px;
+  }
 
 button {
     max-width: 70%;
@@ -649,13 +659,14 @@ button {
     grid-column: 1;
 }
 
-.image-fit, .persona .image-fit {
-    width:50vw;
-    grid-column: 4;
+.image-fit {
+    width:35vw;
+    grid-column: 3;
 }
 
+
 .widthClass{
-    width: 80%;
+    width: 100%;
 }
 .widthClass img {
     width: 80%;
@@ -665,61 +676,145 @@ button {
 }
 /* Styles */ }
 
-/* Desktops and laptops ----------- */
+/* -------------------------TABLET LANDSCAPE & Desktop >768 ----------- */
 
 @media only screen
 
-and (min-width : 1024px) {
+and (min-width : 768px) {
 html {
-        font-size: 14px;
+        font-size: 12px;
     }
-section {
-    grid-template-columns: repeat(12,1fr);
-    padding-left: 0rem;
-}
 
-header, figure, h1, h2, h3, h4, h5, h6, ul, .hero h3, .navwrap, .hero h1, .hero p, .blue p, p, .blue h2, blockquote, .blue blockquote, ul, .action-list, .block-name, .flushBtm img {
-    grid-column: 3 / span 8;
+section {
+    padding-bottom:  1.2rem;
     max-width: 100%;
 }
-.top-wrap{
-    grid-column: 2;
-    width: 100%;
+
+header, figure, h1, h2, h3, h4, h5, h6, ul, .hero h3, .hero h1, .hero p, .blue p, p, .blue h2, .about, .about h1, blockquote, .blue blockquote, ul, .action-list, .block-name {
+    grid-column: 2 / span 4;
+    max-width: 100%;
+}
+p{
+    line-height: 1.rem;
 }
 
+h1{
+    line-height: 3.2rem;
+}
+
+.flushBtm img {
+    grid-column: 2;
+    width: 30vw;
+}
+
+.flushBtm h3, .flushBtm h4{
+    grid-column: 2 / span 4;
+}
+
+.flushBtm button, .flushBtm ul  {
+    grid-column: 2 / span 4; 
+}
+.top-wrap {
+    width: 50%;
+     height: 6.2rem;
+     padding-left: 12rem;
+     padding-top: 1rem;
+     }
 .top-wrap img{
     max-width: 8vw;
    }
-
-nav{
-    grid-column: 8;
-}
 
 .hero img{
     grid-row: 4;
     grid-column: 7;
 }
 
-.image-fit, .persona .image-fit {
- width: 30vw;
- grid-column: 4 / span 10;
+.image-fit {
+ width: 50%;
+ grid-column: 3 / span 4;
 }
 
-.flushBtm .image-fit img {
-    grid-column: 7;
-}
-.widthClass{
-    grid-column: 3 / span 12;
-}
-.widthClass img {
-    width: 100%;
-}
+
 .side-side {
-    grid-column: 3 / 12;
+    grid-column: 2 / span 6;
     width: 100%;
  
+}
+figcaption {
+    width: 85%;
 }
 .side-side img {
     width: 40%;
 }
-/* Styles */ }
+
+.widthClass img {
+    width: 100%;
+}
+
+.persona img {
+    width: 35vw;
+}
+
+.about img{
+    grid-column: 2 ;
+    width: 25vh;
+  
+}
+.about h3 {
+    line-height: 2.4rem;
+    grid-column: 2 / span 5;
+    font-weight: 500;
+    padding: 2rem 0 3.6rem 0;
+}
+.about p {
+    font-size: 1.3rem;
+    line-height: 1.8rem;
+    letter-spacing: .04rem;
+    font-style: normal;
+}
+
+}
+/* SCREEN SIZE  Tablet Landscape / Dekstop >1024px*/
+@media only screen
+
+and (min-width : 1024px) {
+
+html { 
+    font-size: 14px;
+ }
+
+/* The----------------menu */
+
+.menupanel {
+    display: inline-flex;
+    justify-content: space-evenly;
+    height: 7rem;   
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding: 1.2rem; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+    visibility: visible;
+    width: 50%;
+    z-index: 0;
+  }
+
+
+  /* links */
+  .menupanel a {
+    color: #E5E8F0;
+    transition: 0.3s;
+    font-size: 1.7rem;
+    display: inline;
+  }
+  
+  .openbtn{
+      visibility: hidden;
+  }
+  .closebtn {
+   visibility: hidden;
+  }
+  
+  .menupanel .closebtn {
+ visibility: hidden;
+  }
+
+}

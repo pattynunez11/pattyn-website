@@ -6,7 +6,7 @@
         <head>
             <title>Patty Nunez UXUI Designer</title>
             <meta name="viewport" content="width=device-width, initial-scale=1">
-            <meta charset="utf-8" />
+            <meta http-equiv="content-type" content="text/html; charset=UTF-8">
             <link rel="stylesheet" href="styles/reset.css">
             <link rel="stylesheet" href="styles/main.css">
             <script src="main.js"></script>
@@ -20,25 +20,19 @@
                         alt="Patty Nunez Logo PN disc" /> </a>
                   </div> 
                   <!--navigation-->
-                       <nav>  
-                          <label for="hamburger">&#9776;</label>
-                          <input type="checkbox" id="hamburger"/>
-                          <ul> 
-                              <li>
-                                  <a class="active" href="index.html">Projects</a>
-                              </li>
-                              <li>
-                                  <a href="about.html">About</a>
-                              </li>
-                              <li>
-                                  <a href="contact.html">Contact</a>
-                              </li>
-                          </ul>
+                       <nav id="navpanel"
+                       class="menupanel">           
+                       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  <a href="index.html" class="active">Projects</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
         
-                     </nav></div>
-
-            <!--case study header-->
-
+                     </nav>
+                    <!--thetastybuger-->
+<button class="openbtn" onclick="openNav()">&#9776; </button>
+                    </div>
+           <!--case study header-->
             <section class="hero">
                 <header>
                     <h1 class = "hero">Them Photos</h1>
@@ -189,6 +183,7 @@
                     <h5>Caters to DSLR/ pro Camera users</h5>
                     <h5>Phone app is not as robust as web app</h5>
                 </div>
+            </div>
                 <!--row1-external-->
                 <div class="Rows-4cols">
                     <!--row1-->
@@ -248,7 +243,7 @@
                                 other services</h5>
                     <!--end of table-->
                 </div>
-                
+                </div> 
         
 
             <!--market validation-->
@@ -336,7 +331,7 @@
                     points.
                 </p>
                 <div class="block-name">
-                    <h6>Avid Photographer</h6>
+                    <h>Avid Photographer</h>
                     <p>Scott Bends</p>
                 </div>
                 <ul>
@@ -345,7 +340,7 @@
                     <li> LOCATION: Manhattan, New York</li>
                     <li> ARCHETYPE: Photographer </li>
                 </ul>
-                <img class="image-fit" src="images/caseStudy-1/persona1.svg"
+                <img src="images/caseStudy-1/persona1.svg"
                     alt="illustration of man with laptop, sitting crossed legged" />
                 <blockquote>
                     “I’m looking for a cloud service that can store all
@@ -377,7 +372,7 @@
             <!---persona2-->
             <section class="persona">
                 <div class="block-name">
-                    <h6>Photography Enthusiast</h6>
+                    <h5>Photography Enthusiast</h5>
                     <p>Brenda Luba</p>
                 </div>
                 <ul>
@@ -387,7 +382,7 @@
                     <li> ARCHETYPE: Phone Photographer</li>
                 </ul>
 
-                <img class="image-fit" src="images/caseStudy-1/persona2.svg"
+                <img src="images/caseStudy-1/persona2.svg"
                     alt="illustration ofwomen taking a selfie" />
                 <blockquote>
                     “ I would like to back up my photos and share to
@@ -655,16 +650,14 @@
                         alt="brainstorming sketches word play" />
                     <img class="largeCenter" src="images/caseStudy-1/brandSketch-2.png"
                         alt="ideas for brand" />
-                    <img class="largeCenter" src="images/caseStudy-1/brandSketch-3.png"
-                        alt="logo sketches" />
-                    <img
-                    class="largeCenter" src="images/caseStudy-1/combinedConcepts.svg"
-                        alt="putting concepts together" />
+                    <img class="largeCenter" src="images/caseStudy-1/brandSketch-3.png" alt="logo sketches">
                 </figure>
         
                 <h1>Logo, Color and Typeface</h1>
                 <figure class="side-side">
-                <img class="image-fit" src="images/caseStudy-1/tp-logo.png"
+                    <img class="image-fit-2"src="images/caseStudy-1/combinedConcepts.svg"
+                        alt="putting concepts together" />
+                <img class="image-fit-2" src="images/caseStudy-1/tp-logo.png"
                     alt="logo for them photos pink T" />
                 </figure>    
                 <h2>Them Photos</h2>
@@ -674,7 +667,7 @@
                 </p>
                 <!------NOT THE FULL IMAGE OF THE CASESTUDY-->
                 <figure class="side-side">
-                    <img class="largeCenter"
+                    <img class="image-fit-2"
                         src="images/caseStudy-1/phone and tree.png"
                         alt="logo on the phone and logo typeface" />
                 </figure>

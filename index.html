@@ -14,44 +14,43 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
-        <!--logo-->
-        <!--logo-->
-        <div class="navwrap">  
-            <div class="top-wrap">
-             <a href="index.html"><img src="images/pnbluebetty.svg"
-                 alt="Patty Nunez Logo PN disc" /> </a>
-           </div> 
-           <!--navigation-->
-                <nav>  
-                   <label for="hamburger">&#9776;</label>
-                   <input type="checkbox" id="hamburger"/>
-                   <ul> 
-                       <li>
-                           <a class="active" href="index.html">Projects</a>
-                       </li>
-                       <li>
-                           <a href="about.html">About</a>
-                       </li>
-                       <li>
-                           <a href="contact.html">Contact</a>
-                       </li>
-                   </ul>
- 
-              </nav></div>
+                     <!--logo-->
+                     <div class="navwrap">  
+                      <div class="top-wrap">
+                       <a href="index.html"><img src="images/pnbluebetty.svg"
+                           alt="Patty Nunez Logo PN disc" /> </a>
+                     </div> 
+                     <!--navigation-->
+                          <nav id="navpanel"
+                          class="menupanel">           
+                          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+   
+     <a href="index.html" class="active">Projects</a>
+     <a href="about.html">About</a>
+     <a href="contact.html">Contact</a>
+           
+                        </nav>
+                       <!--thetastybuger-->
+   <button class="openbtn" onclick="openNav()">&#9776; </button>
+                       </div>
+                       
         <section class="hero">
+
           <h1>My name is Patty Nunez.
             I am a UX UI Designer.
           I live in San Francisco, CA.</h1>
           <h3>Designing interactions that connect
             users to products by understanding their intentions and discovering as many ahh moments.
           </h3>
-            <p>Take a look at one of my case studies.</p>
-                  <img src="images/arrowScrollDown.svg" />
-        </section>
+            <p>Take a look at one of my case studies. <br><br>
+                  <img src="images/arrowScrollDown.svg" />  
+</p> 
+                </section>
 
       <!--caseStudy link actionable item-->
         <!--homePage caseStudy gallery scrolling (future set-up)-->
         <section class="flushBtm">
+
             <img class="image-fit" src="images/caseStudy-1/tp-logo.png" />
             <h3>An image gallery app on Android for photography enthusiasts.
             </h3>
@@ -65,23 +64,26 @@
               <li>UI Design</li>
               <li>Visual Design</li>
             </ul>
+
             <!--the image for future home page portfolio view-->
             <img class="image-fit" src="images/caseStudy-1/handPhone.png"
               alt="A hand holding a mobile phone a photo of the ocean with Them Photos slogan, store them, organize them, share them" />
+         
         </section>
-     
-      <!--footer-->
-          <footer class="blue btm-bar">
-         <p>&copy; Patty Nunez</p>
-         <p> <a href="mailto:pattyndesign@gmail.com">pattyndesign@gmail.com </a>
-       </p>
-       <p>
-        <a href="https://twitter.com/patricianunez" target="_blank"><img src="images/twitter.svg" alt="twitter account"></a>
-       </p>
-       <p>
-       <a href="https://www.linkedin.com/in/pattynunez/" target="_blank" alt="linkedin account"> <img src="images/linkedin.svg" /> </a>
-       </p>
-          </footer>
+
+     <!--footer-->
+     <footer class="blue btm-bar">
+      <p>&copy; Patty Nunez</p>
+      <p> <a href="mailto:pattyndesign@gmail.com">pattyndesign@gmail.com
+          </a>
+      </p>
+      <p>
+              <img src="images/twitter.svg" />
+      </p>
+      <p>
+              <img src="images/linkedin.svg" />
+      </p>
+  </footer>
 
           <!--END HOME PAGE-->
     </body>
