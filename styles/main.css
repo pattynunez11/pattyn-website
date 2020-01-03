@@ -186,7 +186,7 @@ figcaption {
 }
 
 .flushBtm{
-    padding: 3.2rem 1.6rem 3.2rem 1.6rem;
+    padding: 3.2rem 1.6rem 0rem 1.6rem;
     max-width: 100%;
 }
 
@@ -705,7 +705,7 @@ section {
 }
 .menupanel{
     width: 50%;
-    height: 8.6rem;
+    height: 8.3rem;
     padding-top: 3.2rem;
 }
 
