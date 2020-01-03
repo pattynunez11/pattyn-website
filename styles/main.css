@@ -25,7 +25,7 @@ section{
     grid-auto-rows: auto;
     grid-template-columns: repeat(6,1fr);
     grid-gap: .8rem;
-    padding: 1.6rem;
+    padding: 3.2rem 1.6rem 3.2rem 1.6rem;
     max-width: 100%;
 }
 
@@ -37,9 +37,14 @@ header, figure, .blue, h1, h2, h3, h4, h6, ul, .blue p, .hero, .flushBtm, .flush
 
 /*controling the size of the images viewer*/
 .image-fit {
-    width: 70vw;
+    width: 60vw;
+    max-width: 25rem;
     grid-column: 1 / span 6;
+    margin: 0 auto;
 }
+
+
+/*case study logo max-size*/
 
 .side-side .image-fit-2{
     width: 60vw;
@@ -82,38 +87,41 @@ a {
 h1{
     font-size: 2.8rem;
     font-weight: 700;
-    line-height: 2rem;
+    line-height: 3.2rem;
     letter-spacing: .05rem;
     padding-top: 3.2rem;
 }
 .blue h1 {
     font-size: 2.8rem;
     font-weight: 700;
-    line-height: 2rem;
+    line-height: 3.2rem;
     letter-spacing: .05rem;
     padding-top: 3.2rem;
 }
  h2 {
     font-size: 2.2rem;
     font-weight: 700;
-    line-height: 2rem;
+    line-height: 3rem;
     letter-spacing: .05rem;
-    padding-top: 2.4rem;
+    padding-top: 3.2rem;
 }
 h3 {
     font-size: 1.8rem;
     font-weight: bold;
     letter-spacing: .02rem;
-    line-height: 2rem;   
+    line-height: 2rem;  
+    padding-top: 3.2rem; 
 }
 h4 {
     font-size: 1.8rem;
     font-weight: normal;
     line-height: 2rem;
+    padding-top: 3.2rem;
 }
 h5 {
     font-size: 1.6rem;
-    line-height: 1.6rem;
+    line-height: 1.8rem;
+    padding-top: 3.2rem;
 }
 
 /*font sizes for text, et all..*/
@@ -140,11 +148,13 @@ blockquote {
     padding: 0rem 0rem 0rem .9rem;
 }
 p {
-    padding-bottom: 1.2rem;
+    padding-bottom: 3.2rem;
     grid-column: 1 / 7;
+    line-height: 1.8rem;
 }
 
 /*Figure images containers*/
+
 figure {
     font-size: 1.2rem;
     line-height: 1.6rem;
@@ -176,13 +186,14 @@ figcaption {
 }
 
 .flushBtm{
-    padding: 1.6rem 1.6rem 0rem 1.6rem;
+    padding: 3.2rem 1.6rem 3.2rem 1.6rem;
     max-width: 100%;
 }
 
 .blue {
     background-color: #1C3368;
     color: #E5E8F0;
+    padding: 3.2rem 1.6rem 3.2rem 1.6rem;
 }
 
 
@@ -253,6 +264,8 @@ ul[title]::before {
 }
 
 /*section Green background changes for sections and lists*/
+
+
 .green ul {
     width: 90vw;
 }
@@ -285,12 +298,11 @@ ul[title]::before {
     display: inline-flex;
     width: 100%;
     position: fixed;
-    border-bottom: .001rem solid rgba(51, 225, 172, .3);
-    height: 7.2rem;
+    height: 8.4rem;
 }
 
 .top-wrap{
-    width: 50%;
+    width: 80%;
     height: 6.2rem;
     padding-left: 1.6rem;
     padding-top: 1rem;
@@ -300,8 +312,6 @@ ul[title]::before {
  align-self: center;
 }
 
-
-
 /* The----------------menu */
 .menupanel {
     height: 25rem; /* Specify a height */
@@ -310,7 +320,7 @@ ul[title]::before {
     z-index: 1; /* Stay on top */
     top: 0;
     right: 0;
-    background-color: #1C3368;
+    background-color: rgba(28, 51, 105);
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 6rem; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
@@ -322,14 +332,14 @@ ul[title]::before {
     padding: 1.8rem .8rem 1.8rem 1.8rem;
     text-decoration: none;
     font-size: 2.4rem;
-    color: #818181;
+    color: #E5E8F0;
     display: block;
     transition: 0.3s;
   }
   
   /* hover change their color */
   .menupanel a:hover {
-    color: #f1f1f1;
+    color: #E5E8F0;
   }
   
   /* Position and style the close button (top right corner) */
@@ -342,21 +352,23 @@ ul[title]::before {
   
   /* Style the button that is used to open the menu panel */
   .openbtn {
-    font-size: 2.8rem;
+    font-size: 3.6rem;
     cursor: pointer;
     background-color: #1C3368;
-    color: white;
-    padding: 1rem 1.5rem;
+    color: #E5E8F0;
     border: none;
+    width: 30%;
   }
   
   .openbtn:hover {
     background-color: #1C3368;
   }
-.contact{
-    overflow: hidden
-}
 
+
+button {
+    max-width: 70%;
+    grid-column: 1;
+  }
 
 /*HEADER HERO STATEMENT special typefaces*/
 .hero {
@@ -371,13 +383,14 @@ ul[title]::before {
     line-height: 3.2rem;
     color:  #33E1AC;
     grid-column: 1 /span 6;
+    padding-top: 3.2rem;
 }
 
 .top-section {
     padding-top: 10rem;
 }
 .top-section p {
-    padding-bottom: 0rem;
+    padding-bottom: 3.2rem;
 }
 
 .hero h3 {
@@ -440,12 +453,13 @@ grid-column: 1 /span 6;
 .tableH {
     color: #E5E8F0;
     padding: 1.6rem;
+    padding: 3.2rem 1.6rem 3.2rem 1.6rem;
 }
 
 .Rows-4cols {
     display:flex;
     flex-wrap: wrap;
-    padding: 0 0 1.6rem 0;
+    padding: 1.6rem 1.6rem 3.2rem 1.6rem;
     margin: 0 1.6rem 0 1.6rem;
 }
 /*4row*/
@@ -492,7 +506,9 @@ grid-column: 1 /span 6;
 }
 
 /*instead of div div just used br and targeted for spacing*/
-
+br {
+    line-height: 2.4rem;
+}
 
 /*Key Market Validation*/
 
@@ -552,10 +568,8 @@ grid-column: 1 /span 6;
 /*personas*/
 
 .block-name {
-    background-color: #1C3368;
-    color: #E5E8F0;
-    padding: 1.6rem 0rem 0rem 1.2rem;
-    grid-column: 1 / span 4;
+    color: #FF28B1;
+    grid-column: 1 / span 3;
 }
 
 .persona img {
@@ -591,25 +605,29 @@ grid-column: 1 /span 6;
     color:  #33E1AC;
     grid-column: 1 /span 6;
 }
+   
 
-.side-side.lastImg img{
-    border: 2 solid red;
+/*pushing the footer down*/
+
+.buffer{
+    padding: 3.2rem;
 }
-    
  /* adding flex to the footer*/
 
- 
+ .contact{
+     padding-bottom: 3.2rem;
+ }
 .btm-bar {
     display: flex;
     justify-content: space-between;
     max-width: 90%;
     margin: 0 auto;
+    padding: 0rem;
 }
 .btm-bar p{
     color: #33E1AC;
     font-size: 1.0rem;
-    padding-top: .7rem;
-
+    padding: .7rem 0rem;
 }
 
 .btm-bar img{
@@ -637,22 +655,10 @@ section {
     grid-column: 2 /span 6;
     padding-bottom: 2.4rem;
 }
-/*burger*/
-/* Position and style the close button (top right corner) */
-.menupanel .closebtn {
-    font-size: 3.6rem;
-  }
+
+
   
   /* Style the button that is used to open the menu panel */
-  .openbtn {
-    font-size: 3.6rem;
-    padding: 10px 15px;
-  }
-
-button {
-    max-width: 70%;
-    grid-column: 1;
-  }
 
 /*homepage image*/
 .flushBtm img {
@@ -690,36 +696,60 @@ section {
     max-width: 100%;
 }
 
-header, figure, h1, h2, h3, h4, h5, h6, ul, .hero h3, .hero h1, .hero p, .blue p, p, .blue h2, .about, .about h1, blockquote, .blue blockquote, ul, .action-list, .block-name {
+/* The----------------menu */
+
+.top-wrap{
+    width: 50%;
+}
+  /* links */
+
+.navpanel{
+    width: 50%;
+    height: 0rem;
+}
+.menupanel{
+    width: 50%;
+    height: 8.6rem;
+    padding-top: 3.2rem;
+}
+
+  .menupanel a {
+    color: #E5E8F0;
+    transition: 0.3s;
+    font-size: 1.7rem;
+    display: inline;
+  }
+
+
+  .openbtn{
+      visibility: hidden;
+  }
+  .closebtn {
+   visibility: hidden;
+  }
+  
+header, figure, h1, h2, h3, h4, h5, h6, ul, .hero h3, .hero h1, .hero p, .blue p, p, .blue h2, .about, .about h1, blockquote, .blue blockquote, ul, .action-list, .block-name .flushBtm {
     grid-column: 2 / span 4;
     max-width: 100%;
 }
-p{
-    line-height: 1.rem;
-}
 
-h1{
-    line-height: 3.2rem;
-}
 
 .flushBtm img {
     grid-column: 2;
     width: 30vw;
+    padding-left: 1.6rem;
 }
 
 .flushBtm h3, .flushBtm h4{
     grid-column: 2 / span 4;
+    padding-left: 1.6rem;
 }
 
 .flushBtm button, .flushBtm ul  {
     grid-column: 2 / span 4; 
+    padding-left: 1.6rem;
 }
-.top-wrap {
-    width: 50%;
-     height: 6.2rem;
-     padding-left: 12rem;
-     padding-top: 1rem;
-     }
+
 .top-wrap img{
     max-width: 8vw;
    }
@@ -730,8 +760,8 @@ h1{
 }
 
 .image-fit {
- width: 50%;
- grid-column: 3 / span 4;
+ width: 40%;
+ grid-column: 1 / span 4;
 }
 
 
@@ -747,6 +777,9 @@ figcaption {
     width: 40%;
 }
 
+.side-side figcaption {
+    width: 70%;
+}
 .widthClass img {
     width: 100%;
 }
@@ -780,41 +813,17 @@ figcaption {
 and (min-width : 1024px) {
 
 html { 
-    font-size: 14px;
+    font-size: 15px;
  }
 
-/* The----------------menu */
+ body{
+     line-height: 1.6rem;
+ }
 
-.menupanel {
-    display: inline-flex;
-    justify-content: space-evenly;
-    height: 7rem;   
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding: 1.2rem; /* Place content 60px from the top */
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
-    visibility: visible;
-    width: 50%;
-    z-index: 0;
-  }
-
-
-  /* links */
-  .menupanel a {
-    color: #E5E8F0;
-    transition: 0.3s;
-    font-size: 1.7rem;
-    display: inline;
-  }
-  
-  .openbtn{
-      visibility: hidden;
-  }
-  .closebtn {
-   visibility: hidden;
-  }
-  
-  .menupanel .closebtn {
- visibility: hidden;
-  }
+ header, figure, h1, h2, h3, h4, h5, h6, ul, .hero h3, .hero h1, .hero p, .blue p, p, .blue h2, .about, .about h1, blockquote, .blue blockquote, ul, .action-list, .block-name {
+    grid-column: 2 / span 4;
+    max-width: 100%;
+    margin-right: 9rem
+}
 
 }
