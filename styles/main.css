@@ -293,6 +293,11 @@ ul[title]::before {
     color: #E5E8F0;
 }
 
+.crumbs ul li{
+    color: #E5E8F0;
+    font-size: 1rem;
+    font-weight: 100;
+}
 .navwrap{
     background-color: #1C3368;
     display: inline-flex;
@@ -331,7 +336,7 @@ ul[title]::before {
   .menupanel a {
     padding: 1.8rem .8rem 1.8rem 1.8rem;
     text-decoration: none;
-    font-size: 2.4rem;
+    font-size: 1.8rem;
     color: #E5E8F0;
     display: block;
     transition: 0.3s;
@@ -339,7 +344,7 @@ ul[title]::before {
   
   /* hover change their color */
   .menupanel a:hover {
-    color: #E5E8F0;
+    color: #33E1AC;
   }
   
   /* Position and style the close button (top right corner) */
@@ -652,7 +657,9 @@ section {
     padding-bottom: 2.4rem;
 }
 
-
+.navpanel{
+    width: 28%;
+}
   
   /* Style the button that is used to open the menu panel */
 
